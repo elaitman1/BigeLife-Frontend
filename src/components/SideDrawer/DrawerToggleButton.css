@@ -1,0 +1,26 @@
+/* display flex and direction are horizontal lines */
+/* space between will make sure the space in the button is equaly distributed among the lines */
+/* space around does the inner area */
+.toggle-button {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 2em;
+  width: 2.5em;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.toggle-button:focus {
+  outline: none;
+}
+
+/* height below changes the width of the lines */
+.toggle-button_line {
+  width: 2.5em;
+  height: .2em;
+  background: white;
+}
