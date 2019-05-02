@@ -8,7 +8,12 @@ import {
   // DELETE_STREAM
 } from '../actions/types';
 
-export default (state = {}, action) => {
+export default (state = {
+  author: "Eric Laitman",
+  title: "Life",
+  content: "There goes the cue. Drop the mic and go get it",
+  image:"https://energy.hawaii.gov/wp-content/uploads/2013/07/Ocean.png"
+}, action) => {
   switch (action.type) {
 
     case FETCH_ARTICLES:

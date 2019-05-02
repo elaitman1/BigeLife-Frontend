@@ -27,6 +27,7 @@ class HomePage extends React.Component{
     return (
       <div>
       {this.props.articles.map(article=>{
+        debugger
         return <div onClick={this.handleClick}>
         <div id='block'>
         <div id="author">{article.title}</div>
@@ -40,11 +41,14 @@ class HomePage extends React.Component{
   }
 }
 
+
 const mapStateToProps =
  (state, ownProps) => {
     return {
-      articles: Object.values(state.articles)
+      articles: Object.values(state.articles),
+      vals: Object.keys(state.articles)
     };
+
   }
 
 

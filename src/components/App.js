@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-
+import { connect } from 'react-redux';
 
 import HomePage from './HomePage';
 import ViewChosenArticle from './ViewChosenArticle';
@@ -25,6 +25,8 @@ class App extends React.Component {
     this.setState({sideDrawerOpen: false})
   }
   render() {
+
+
     let backdrop;
 
     if(this.state.sideDrawerOpen) {
@@ -43,5 +45,14 @@ class App extends React.Component {
     )
   };
 }
-
-export default App;
+export default App
+// const mapStateToProps = (state, ownProps) => {
+//   debugger
+//   return {
+//     content: state.articles.content
+//   }
+// }
+//
+// export default connect(
+//   mapStateToProps
+// )(App);
