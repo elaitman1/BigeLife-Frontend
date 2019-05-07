@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import { fetchArticles, chosenArticle } from '../actions';
-// import './App.css'
+import './App.css'
 
 class ViewChosenArticle extends React.Component{
 
