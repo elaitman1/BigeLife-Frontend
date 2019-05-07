@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import { fetchArticles, chosenArticle } from '../actions';
-import './App.css'
+// import './App.css'
 
 class ViewChosenArticle extends React.Component{
 
@@ -36,12 +36,12 @@ class ViewChosenArticle extends React.Component{
   randomArticlesArray = () => {
     let array = []
     for (let props in this.props.articles){
-      
+
       if (props !== "chosenArticle" && props !== this.props.articles.chosenArticle.id){
         array.push(this.props.articles[props])
       }
     }
-    
+
     return array
   }
 
