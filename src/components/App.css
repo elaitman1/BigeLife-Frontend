@@ -1,3 +1,22 @@
+body {
+  margin-top: 3.4em;
+  margin-bottom: 30em;
+}
+
+#typetag {
+    font-size: .8em;
+    letter-spacing: .1em;
+    position: absolute;
+    font-family: Arial Rounded MT Bold, arial;
+    padding: 1%;
+    margin-left: 5%;
+    margin-top: 16%;
+    /* border-style: solid; */
+    background-color: black;
+    color: white;
+    word-wrap: break-word;
+}
+
 img, #homepage {
   width: 100%;
 }
@@ -6,20 +25,22 @@ img, #homepage {
   opacity: .7;
 }
 
-#author {
-  font-size: 1.5em;
+#title {
+  font-size: 1.2em;
   letter-spacing: .1em;
   position: absolute;
   font-family: Arial Rounded MT Bold, arial;
   padding: 1%;
-  margin: 1%;
+  margin-top: 4%;
+  margin-left: 1%;
+  /* margin: 1%; */
   border-style: solid;
   background-color: white;
   color: black;
   word-wrap: break-word;
 }
 
-.homepage, author{
+.author{
   font-size: 1.3em;
   letter-spacing: .2em;
   position: absolute;

@@ -1,25 +1,22 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import { fetchArticles, chosenArticle } from '../actions';
-import './App.css'
 import history from '../history'
-
 class HomePage extends React.Component{
 
   componentDidMount(){
-    this.props.fetchArticles()
-  }
+    // setTimeout(() => {
+      this.props.fetchArticles()
+  // }, 5000)}
+}
 
   handleClick = (event) =>{
+    let id = parseInt(event.currentTarget.id)
 
-
-    const articleName = event.currentTarget.children[0].childNodes[0].innerText
-    this.props.history.push('/viewchosenarticle');
-
-    let foundArticle = this.props.articles.find(article=>article.title === articleName)
+    let foundArticle = this.props.articles.find(article=>article.id === id)
 
     this.props.chosenArticle(foundArticle)
-
+    this.props.history.push('/viewchosenarticle');
 
   }
 
@@ -27,11 +24,13 @@ class HomePage extends React.Component{
     return (
       <div>
       {this.props.articles.map(article=>{
-        debugger
-        return <div onClick={this.handleClick}>
+
+        return <div id={article.id} onClick={this.handleClick}>
         <div id='block'>
-        <div id="author">{article.title}</div>
-        <div className="homepage author">{article.author}</div>
+        <div id="title">{article.title}</div>
+        <div id="typetag">{article.tag}</div>
+        <div className="author">{article.author}</div>
+
         </div>
         <img id="homepage" src={article.image}/>
         </div>
@@ -44,11 +43,11 @@ class HomePage extends React.Component{
 
 const mapStateToProps =
  (state, ownProps) => {
+
     return {
       articles: Object.values(state.articles),
       vals: Object.keys(state.articles)
     };
-
   }
 
 

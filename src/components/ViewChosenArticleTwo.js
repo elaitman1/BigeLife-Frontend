@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { fetchArticles, chosenArticle } from '../actions';
 import './App.css'
 
-class ViewChosenArticle extends React.Component{
+class ViewChosenArticleTwo extends React.Component{
 
   state = {
     youMayAlsoLike: []
@@ -11,9 +11,9 @@ class ViewChosenArticle extends React.Component{
 
   handleClick = (event) =>{
     let clickedId = parseInt(event.currentTarget.id)
-    this.props.chosenArticle(this.props.articles[clickedId])
 
-    this.props.history.push('/viewchosenarticletwo');
+    this.props.chosenArticle(this.props.articles[clickedId])
+    this.props.history.push('/viewchosenarticle');
   }
 
 
@@ -31,17 +31,13 @@ class ViewChosenArticle extends React.Component{
     this.setState({youMayAlsoLike:result})
   }
 
-
-
   randomArticlesArray = () => {
     let array = []
     for (let props in this.props.articles){
-      
       if (props !== "chosenArticle" && props !== this.props.articles.chosenArticle.id){
         array.push(this.props.articles[props])
       }
     }
-    
     return array
   }
 
@@ -127,4 +123,4 @@ const mapStateToProps =
 export default connect(
   mapStateToProps,
   { fetchArticles, chosenArticle }
-)(ViewChosenArticle);
+)(ViewChosenArticleTwo);

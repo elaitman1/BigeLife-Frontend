@@ -1,2 +1,4 @@
 export const FETCH_ARTICLES = 'FETCH_ARTICLES';
 export const CHOSEN_ARTICLE = 'CHOSEN_ARTICLE';
+export const SEARCH_INPUT = 'SEARCH_INPUT';
+export const SEARCH_RESULTS = 'SEARCH_RESULTS';
