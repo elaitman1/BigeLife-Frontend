@@ -3,9 +3,14 @@ import { combineReducers } from 'redux';
 // import authReducer from './authReducer';
 
 import articleReducer from './articleReducer';
+import chosenArticle from './chosenArticle';
+import searchInput from './searchInput';
+import searchResults from './searchResults';
 
 export default combineReducers({
   // auth: authReducer,
-  // form: formReducer,
-  articles: articleReducer
+  searchResults: searchResults,
+  searchInput: searchInput,
+  articles: articleReducer,
+  chosenArticle: chosenArticle
 });

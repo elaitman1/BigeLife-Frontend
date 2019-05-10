@@ -4,8 +4,11 @@
   background: #521751;
   font-family: sans-serif;
   position: fixed;
-  z-index: 1;
   margin-top: -3.4em;
+  z-index: 1;
+}
+#searchbutton{
+  display: none;
 }
 
 .toolbar_navigation{
@@ -70,7 +73,6 @@
 
 @media (max-width: 375px){
   input {
-    margin-left: 40%;
-
+    margin-bottom: 1.5em;
   }
 }

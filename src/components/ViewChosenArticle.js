@@ -11,49 +11,36 @@ class ViewChosenArticle extends React.Component{
 
   handleClick = (event) =>{
     let clickedId = parseInt(event.currentTarget.id)
-    this.props.chosenArticle(this.props.articles[clickedId])
+    let foundArticle = this.props.articles.find(article=>article.id === clickedId)
+    this.props.chosenArticle(foundArticle)
 
     this.props.history.push('/viewchosenarticletwo');
   }
 
 
-  randomArticle = (arr, n) => {
-    var result = new Array(n),
-        len = arr.length,
-        taken = new Array(len);
-    if (n > len)
-        throw new RangeError("getRandom: more elements taken than available");
-    while (n--) {
-        var x = Math.floor(Math.random() * len);
-        result[n] = arr[x in taken ? taken[x] : x];
-        taken[x] = --len in taken ? taken[len] : len;
-    }
-    this.setState({youMayAlsoLike:result})
-  }
+  randomArticle = () => {
+    console.log(this.props.chosenArticle)
+    let allOtherArticles =  this.props.articles.filter(article => article.id !== this.props.chosenArticleId)
 
+    let  results = allOtherArticles
+    .sort(function() { return .5 - Math.random() }) // Shuffle array
+    .slice(0, 2); // Get first 2 items
 
-
-  randomArticlesArray = () => {
-    let array = []
-    for (let props in this.props.articles){
-
-      if (props !== "chosenArticle" && props !== this.props.articles.chosenArticle.id){
-        array.push(this.props.articles[props])
-      }
-    }
-
-    return array
+    let pickedOne = results[0];
+    let pickedTwo = results[1];
+    this.setState({youMayAlsoLike:[pickedOne, pickedTwo]})
   }
 
 
 
   componentDidMount() {
 
-    this.randomArticle(this.randomArticlesArray(), 2)
+    this.randomArticle()
 
   }
 
   render()  {
+
     return (
       <div>
       <img src={this.props.image} />
@@ -78,13 +65,15 @@ class ViewChosenArticle extends React.Component{
 const mapStateToProps =
  (state, ownProps) => {
 
-   if (state.articles.length !== 0){
+   if (state.chosenArticle !== undefined){
+
      return {
-       title: state.articles.chosenArticle.title,
-       image: state.articles.chosenArticle.image,
-       content: state.articles.chosenArticle.content,
-       author: state.articles.chosenArticle.author,
-       articles: state.articles
+       title: state.chosenArticle.title,
+       image: state.chosenArticle.image,
+       content: state.chosenArticle.content,
+       author: state.chosenArticle.author,
+       articles: state.articles,
+       chosenArticleId: state.chosenArticle.id
      };
    }else{
     return {

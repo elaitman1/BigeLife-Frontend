@@ -1,4 +1,3 @@
-import baseUrl from '../apis/baseUrl'
 import history from '../history'
 
 import {
@@ -15,11 +14,17 @@ import {
 
 
 export const fetchArticles = () => async dispatch => {
-  const response = await baseUrl.get('/articles');
-  dispatch({ type: FETCH_ARTICLES, payload: response.data });
+  // const response = await baseUrl.get('/articles');
+  await fetch('http://localhost:3000/api/v1/articles')
+  .then(r=> r.json())
+  .then(r=>{
+
+    dispatch({ type: FETCH_ARTICLES, payload: r });
+  })
 };
 
 export const chosenArticle = article => {
+  
   return {
     type: CHOSEN_ARTICLE,
     payload: article

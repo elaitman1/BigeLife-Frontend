@@ -24,7 +24,6 @@ class HomePage extends React.Component{
     return (
       <div>
       {this.props.articles.map(article=>{
-
         return <div id={article.id} onClick={this.handleClick}>
         <div id='block'>
         <div id="title">{article.title}</div>
@@ -43,12 +42,12 @@ class HomePage extends React.Component{
 
 const mapStateToProps =
  (state, ownProps) => {
+     return {
+       articles: Object.values(state.articles),
+       vals: Object.keys(state.articles)
+     };
+   }
 
-    return {
-      articles: Object.values(state.articles),
-      vals: Object.keys(state.articles)
-    };
-  }
 
 
 export default connect(

@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import {
   FETCH_ARTICLES,
-  CHOSEN_ARTICLE,
+  // CHOSEN_ARTICLE,
   SEARCH_INPUT,
   SEARCH_RESULTS,
   // FETCH_STREAMS,
@@ -10,17 +10,24 @@ import {
   // DELETE_STREAM
 } from '../actions/types';
 
-export default (state = [], action) => {
+export default (state = {}, action) => {
   switch (action.type) {
 
     case FETCH_ARTICLES:
-      return { ...state, ..._.mapKeys(action.payload, 'id') };
-    case CHOSEN_ARTICLE:
-      return { ...state, chosenArticle: action.payload };
-    case SEARCH_INPUT:
-      return {...state, searchInput: action.payload };
-      case SEARCH_RESULTS:
-        return { searchResults: action.payload};
+    // return [{Object.assign(...state, {action.payload:id}))
+      return action.payload;
+    // case CHOSEN_ARTICLE:
+    // debugger
+    // let oldState = [...state]
+    // let newState = {chosenArticle: action.payload}
+    //   return [oldState, newState];
+
+      // case SEARCH_RESULTS:
+      // debugger
+      //   return (
+      //     { searchResults: action.payload },
+      //     [...state]
+      //   );
       //map keys will take an array and return an object... create new object. whatever id is use that as key and the value is everything else associated with the object. merges array of objects into one large object
     // case FETCH_STREAM:
     //   return { ...state, [action.payload.id]: action.payload };

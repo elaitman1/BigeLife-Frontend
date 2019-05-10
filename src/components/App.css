@@ -40,6 +40,8 @@ img, #homepage {
   word-wrap: break-word;
 }
 
+
+
 .author{
   font-size: 1.3em;
   letter-spacing: .2em;
@@ -54,4 +56,20 @@ img, #homepage {
   color: black;
 
   word-wrap: break-word;
+}
+
+
+
+@media (max-width: 375px){
+  input {
+      margin-left: 20%;
+      margin-top: 1.5em;
+      width: 70%;
+      height: 2em;
+      border-style: line;
+      border-color: black;
+      background-color: #521751;
+      color: white;
+      font-size: .8em;
+    }
 }

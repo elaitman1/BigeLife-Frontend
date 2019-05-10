@@ -10,7 +10,6 @@ import SideDrawer from './SideDrawer/SideDrawer'
 import Footer from './Footer/Footer.js'
 import Backdrop from './Backdrop/Backdrop'
 import SearchResults from './SearchResults'
-// <div style={{height: '100%'}}>
 
 
 class App extends React.Component {
