@@ -8,8 +8,11 @@ const sideDrawer = props => {
   return (
       <nav className={drawerClasses}>
       <ul>
-        <li><a href="/">Home</a><li>
-        </li><a href="/">Users</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/">Featured</a></li>
+        <li><a href="/">Investments</a></li>
+        <li><a href="/">Health</a></li>
+        <li><a href="/">General</a></li>
       </ul>
     </nav>
   )

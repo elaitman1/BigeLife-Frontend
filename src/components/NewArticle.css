@@ -1,0 +1,17 @@
+.newButton{
+  height: 2em;
+  background-color: black;
+  color: white;
+  margin-left: 14em;
+}
+
+@media (max-width: 375px){
+      #contentBox {
+        /* word-wrap: break-word; */
+        margin-left: 5.5em;
+        background-color: white;
+        border: solid;
+        width: 20em;
+        height: 30em;
+      }
+    }

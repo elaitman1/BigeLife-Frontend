@@ -1,48 +1,30 @@
-body {
-  margin-top: 3.4em;
-  /* padding-bottom: 30em; */
-  position: relative;
-  /* min-height: 100vh; */
-  padding-bottom: 2.5rem;
+.FeatureSlider {
   width: 100%;
 }
 
-.noSearchResults{
-  width: 100%;
-  background-color: black;
-  font-size: 4em;
-  text-align: center;
-  color: white;
-}
-
-
-#typetag {
-    font-size: .8em;
-    letter-spacing: .1em;
-    position: absolute;
-    font-family: Arial Rounded MT Bold, arial;
-    padding: 1%;
-    margin-left: 5%;
-    margin-top: 16%;
-    /* border-style: solid; */
-    background-color: black;
-    color: white;
-    word-wrap: break-word;
-}
-
-#block{
+.ftypetag{
   opacity: .7;
+  font-size: .8em;
+  letter-spacing: .1em;
+  position: absolute;
+  font-family: Arial Rounded MT Bold, arial;
+  padding: .2%;
+  margin-top: 2.4%;
+  margin-left: .9%;
+  background-color: black;
+  color: white;
+  word-wrap: break-word;
 }
 
-#title {
+.ftitle {
+  opacity: .7;
   font-size: 1.2em;
   letter-spacing: .1em;
   position: absolute;
   font-family: Arial Rounded MT Bold, arial;
-  padding: 1%;
-  margin-top: 4%;
-  margin-left: 1%;
-  /* margin: 1%; */
+  padding: .2%;
+  margin-top: .6%;
+  margin-left: .3%;
   border-style: solid;
   background-color: white;
   color: black;
@@ -51,14 +33,15 @@ body {
 
 
 
-.author{
-  font-size: 1.3em;
+.fauthor{
+  opacity: .7;
+  font-size: 1.4em;
   letter-spacing: .2em;
   position: absolute;
   font-family: Arial Rounded MT Bold, arial;
-  padding: 1%;
-  margin-top: 57%;
-  margin-left: 1%;
+  padding: .2%;
+  margin-top: 8%;
+  margin-left: .3%;
   border-style: solid;
   border-color: black;
   background-color: white;
@@ -66,8 +49,9 @@ body {
   word-wrap: break-word;
 }
 
-@media (max-width: 375px){
+/* @media (max-width: 375px){
   input {
+      margin-left: 20%;
       margin-top: 1.5em;
       width: 70%;
       height: 2em;
@@ -78,10 +62,11 @@ body {
       font-size: .8em;
     }
     img{
+      width: 375px;
       height: 268.59px;
     }
     .noSearchResults{
       height: 10em;
       padding-top: 2em;
     }
-}
+} */

@@ -22,28 +22,9 @@ class toolbar extends React.Component{
               array.push(object)
             }
           })
-
-
-
-
-      //no duplicates in the search
-      // let newArray = []
-      // const map = new Map()
-      // for (const item of array){
-      //   if(!map.has(item.id)){
-      //     map.set(item.id, true);
-      //     newArray.push({
-      //       id: item.id,
-      //       name: item.title,
-      //       author: item.author,
-      //       content: item.content
-      //     })
-      //   }
-      // }
       this.props.searchResults(array)
       this.props.history.push('/searchresults')
       event.target.reset()
-      return array
     }
 
 

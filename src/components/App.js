@@ -1,7 +1,8 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import { connect } from 'react-redux';
 
+import NewArticle from './NewArticle'
 import HomePage from './HomePage';
 import ViewChosenArticle from './ViewChosenArticle';
 import ViewChosenArticleTwo from './ViewChosenArticleTwo';
@@ -35,7 +36,7 @@ class App extends React.Component {
     return (
       <div>
       <Router >
-        <div >
+        <div>
                 <Route render={props => <Toolbar {...props} drawerClickHandler={this.drawerToggleClickHandler}/>}/>
                 <Route render={props =><SideDrawer show={this.state.sideDrawerOpen}/>}/>
                 {backdrop}
@@ -43,6 +44,7 @@ class App extends React.Component {
                 <Route path="/viewchosenarticle" render={props => <ViewChosenArticle {...props}/>} />
                 <Route path="/viewchosenarticletwo" render={props => <ViewChosenArticleTwo {...props}/>} />
                 <Route path="/searchresults" render={props => <SearchResults {...props}/>} />
+                <Route path="/newarticle" render={props => <NewArticle {...props}/>} />
             </div>
           </Router>
           <Footer />

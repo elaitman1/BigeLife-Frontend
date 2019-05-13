@@ -6,9 +6,14 @@
   position: fixed;
   margin-top: -3.4em;
   z-index: 1;
+  /* padding-right: 5em; */
 }
 #searchbutton{
   display: none;
+}
+
+.noResults{
+
 }
 
 .toolbar_navigation{

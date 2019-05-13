@@ -18,6 +18,7 @@
 }
 
 .side-drawer ul{
+  margin-top: 3em;
   height: 30%;
   list-style: none;
   display: flex;
@@ -27,7 +28,7 @@
 
 .side-drawer li {
   padding: .3em;
-  margin-left: .5em;
+  /* margin-left: .5em; */
   font-family: sans-serif;
 }
 
