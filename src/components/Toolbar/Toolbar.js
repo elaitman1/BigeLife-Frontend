@@ -46,8 +46,8 @@ class toolbar extends React.Component{
       </div>
       <div className="toolbar_navigation-items">
         <ul>
-          <li><a href="/">Products</a></li>
-          <li><a href="/">Users</a></li>
+          <li><a href="/section">Products</a></li>
+          <li><a href="/section">Users</a></li>
         </ul>
       </div>
     </nav>

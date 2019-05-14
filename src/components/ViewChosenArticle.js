@@ -53,7 +53,7 @@ class ViewChosenArticle extends React.Component{
         <img src={article.image} /><br />
         <div>{article.title}</div><br />
         <div>{article.author}</div><br />
-
+        <div>{article.tag}</div><br />
         </div>
       })}
       </div>
@@ -73,6 +73,7 @@ const mapStateToProps =
        content: state.chosenArticle.content,
        author: state.chosenArticle.author,
        articles: state.articles,
+       tag: state.chosenArticle.tag,
        chosenArticleId: state.chosenArticle.id
      };
    }else{

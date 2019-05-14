@@ -1,20 +1,49 @@
 import React from 'react'
 import './SideDrawer.css'
-const sideDrawer = props => {
+import { connect } from 'react-redux'
+import { clickedSection } from '/Users/ericlaitman/redux2/BigeLife-Frontend/src/actions/index.js'
+class SideDrawer extends React.Component {
+
+  handleClick = async (event) => {
+    this.props.clickedSection(event.target.id)
+    if(this.props.location.pathname === '/section'){
+      this.props.history.push('/sectiontwo')
+    }else if (this.props.location.pathname === '/sectiontwo'){
+      this.props.history.push('/section')
+    }else if(this.props.location.pathname === '/'){
+      this.props.history.push('/section')
+    }
+  }
+
+  render() {
+
   let drawerClasses = 'side-drawer'
-  if (props.show) {
+  if (this.props.show) {
     drawerClasses = 'side-drawer open'
   }
+
   return (
       <nav className={drawerClasses}>
-      <ul>
+      <ul onClick={this.handleClick}>
         <li><a href="/">Home</a></li>
-        <li><a href="/">Featured</a></li>
-        <li><a href="/">Investments</a></li>
-        <li><a href="/">Health</a></li>
-        <li><a href="/">General</a></li>
+        <li><a id="healthandwellness">Health</a></li>
+        <li><a id="finance">Finance</a></li>
+        <li><a id="miscellaneous">General</a></li>
+
       </ul>
     </nav>
   )
 }
-export default sideDrawer
+}
+
+const mapStateToProps =
+ (state, ownProps) => {
+     return {
+       clickedS: state.clickedSection
+     };
+   }
+
+export default connect(
+  mapStateToProps,
+  { clickedSection }
+)(SideDrawer);

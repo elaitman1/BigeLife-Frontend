@@ -1,0 +1,15 @@
+.yes authorsection {
+  opacity: .7;
+  font-size: 14em;
+  letter-spacing: .2em;
+  position: absolute;
+  font-family: Arial Rounded MT Bold, arial;
+  padding: .2%;
+  margin-top: 8%;
+  margin-left: .3%;
+  border-style: solid;
+  border-color: black;
+  background-color: white;
+  color: black;
+  word-wrap: break-word;
+}

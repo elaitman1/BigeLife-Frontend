@@ -48,11 +48,11 @@ class ViewChosenArticleTwo extends React.Component{
       {this.props.content}
       <h1>You May Also Like</h1>
       <div>{this.state.youMayAlsoLike.map(article=>{
-
       return  <div  onClick={this.handleClick} id={article.id}>
         <img src={article.image} /><br />
         <div>{article.title}</div><br />
         <div>{article.author}</div><br />
+        <div>{article.tag}</div><br />
         </div>
       })}
       </div>
@@ -70,6 +70,7 @@ const mapStateToProps =
        image: state.chosenArticle.image,
        content: state.chosenArticle.content,
        author: state.chosenArticle.author,
+       tag: state.chosenArticle.tag,
        articles: state.articles
      };
    }else{

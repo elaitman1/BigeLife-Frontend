@@ -8,7 +8,7 @@ import {
   FETCH_ARTICLES,
   SEARCH_INPUT,
   SEARCH_RESULTS,
-  // EDIT_STREAM
+  CLICKED_SECTION
 } from './types';
 
 
@@ -23,7 +23,7 @@ export const fetchArticles = () => async dispatch => {
 };
 
 export const createArticle = async(title, author, tag, image, content) => async dispatch => {
-  debugger
+
   await fetch('http://localhost:3000/api/v1/articles', {
       method: "POST",
       headers: {
@@ -45,7 +45,7 @@ export const createArticle = async(title, author, tag, image, content) => async 
   }
 
 export const chosenArticle = article => {
-debugger
+
   return {
     type: CHOSEN_ARTICLE,
     payload: article
@@ -60,6 +60,14 @@ export const searchInput = value => {
 export const searchResults = (value) => {
   return  {
     type: SEARCH_RESULTS,
+    payload: value
+  }
+}
+
+export const clickedSection = (value) => {
+  
+  return  {
+    type: CLICKED_SECTION,
     payload: value
   }
 }

@@ -3,9 +3,7 @@ import Slider from 'react-slick'
 import './HomepageFeatureSlider.css'
 import { connect } from 'react-redux';
 import { fetchArticles, chosenArticle } from '../actions';
-import { BrowserRouter as Router, Route } from "react-router-dom";
-// import history from '../history'
-// import FeatureSlider from './FeatureSlider'
+
 
 class HomePage extends React.Component{
 

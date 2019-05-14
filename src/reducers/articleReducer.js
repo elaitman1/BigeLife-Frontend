@@ -17,13 +17,13 @@ export default (state = {}, action) => {
     // return [{Object.assign(...state, {action.payload:id}))
       return action.payload;
     // case CHOSEN_ARTICLE:
-    // debugger
+    //
     // let oldState = [...state]
     // let newState = {chosenArticle: action.payload}
     //   return [oldState, newState];
 
       // case SEARCH_RESULTS:
-      // debugger
+      //
       //   return (
       //     { searchResults: action.payload },
       //     [...state]
