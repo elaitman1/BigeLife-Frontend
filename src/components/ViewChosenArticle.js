@@ -47,7 +47,7 @@ class ViewChosenArticle extends React.Component{
       {this.props.title }<br />
       {this.props.author}<br />
       {this.props.content}
-      <h1>You May Also Like</h1>
+      <h1 className='mayAlsoLike'>You May Also Like</h1>
       <div>{this.state.youMayAlsoLike.map(article=>{
       return  <div  onClick={this.handleClick} id={article.id}>
         <img src={article.image} /><br />

@@ -2,7 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 
 import history from '/Users/ericlaitman/redux2/BigeLife-Frontend/src/history.js'
+import FooterLogo from './FooterLogo'
 import { connect } from 'react-redux';
+import Logo from './Logo'
+import Date from './Date'
 import SectionTwo from './SectionTwo'
 import Section from './Section'
 import NewArticle from './NewArticle'
@@ -48,6 +51,8 @@ class App extends React.Component {
       <div>
       <Router >
         <div>
+                <Route render={props =><Logo {...props}/>}/>
+                <Route render={props =><Date {...props}/>}/>
                 <Route render={props => <Toolbar {...props} drawerClickHandler={this.drawerToggleClickHandler}/>}/>
                 <Route render={props =><SideDrawer {...props} show={this.state.sideDrawerOpen}/>}/>
                 {backdrop}
@@ -60,6 +65,7 @@ class App extends React.Component {
                 <Route path="/sectiontwo" render={props => <SectionTwo {...props}/>} />
             </div>
           </Router>
+          <FooterLogo />
           <Footer />
           </div>
     )

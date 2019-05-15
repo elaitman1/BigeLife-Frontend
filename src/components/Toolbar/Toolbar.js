@@ -27,15 +27,33 @@ class toolbar extends React.Component{
       event.target.reset()
     }
 
+  componentDidMount = () => {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+    handleScroll = () => {
+      var sticky = header.offsetTop;
+      if (window.pageYOffset > sticky) {
+         header.classList.add("sticky");
+       } else {
+         header.classList.remove("sticky");
+       }
+    }
+
+
+
 
   render(){
-    return (
-  <header className="toolbar">
+    return(
+    this.handleScroll()?
+      <header className="toolbar" style={{position:'absolute'}}>
+    :
+      <header className="toolbar" style={{position:'sticky'}}>
     <nav className="toolbar_navigation">
       <div className="toolbar_toggle-button">
       <DrawerToggleButton click={this.props.drawerClickHandler}/>
       </div>
-      <div className="toolbar_logo"><a href="/">BigELife</a></div>
+      <div className="toolbar_logo"><a href="/"></a></div>
       <div className="spacer"></div>
       <div className="Search filter">
       <form onSubmit={this.handleSubmit}>
@@ -54,7 +72,7 @@ class toolbar extends React.Component{
   </header>
 )
 }
-}
+
 
 
 

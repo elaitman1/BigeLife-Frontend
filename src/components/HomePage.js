@@ -71,19 +71,20 @@ class HomePage extends React.Component{
   render() {
 
     let settings = {
-        dots: true,
+        // dots: true,
         infinite: true,
-        // autoplay: true,
+        autoplay: true,
         useCss: true,
         autoplaySpeed: 3000,
-        slidesToShow: 1,
-        slidesToScroll: 1
+        arrows: false,
+        // slidesToShow: 1,
+        // slidesToScroll: 1
       }
 
     return (
         <div>
         {this.state.featuredArticles.length === 0? <div>loading...</div> :
-        <Slider {...settings}>
+        <Slider {...settings} className="hslider">
         <div id={this.state.featuredArticles[0].id} onClick={this.handleClick}>
          <div className='fblock'>
          <div className="ftitle">{this.state.featuredArticles[0].title}</div>

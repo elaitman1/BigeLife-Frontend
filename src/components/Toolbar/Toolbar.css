@@ -1,12 +1,19 @@
 .toolbar{
   width: 100%;
   height: 8%;
-  background: #521751;
+  /* background: #521751; */
   font-family: sans-serif;
   position: fixed;
-  margin-top: -3.4em;
+  /* top:0; */
+  margin-top: -.9em;
+  margin-bottom:5em;
   z-index: 1;
-  /* padding-right: 5em; */
+  border: solid;
+  border-color:#EB219B;
+  background:black;
+  -webkit-filter: drop-shadow(3px 3px 1px #441F62);
+  /* -webkit-transform: skew(-5deg,-5deg); */
+  font-weight: normal;
 }
 #searchbutton{
   display: none;
@@ -25,13 +32,21 @@
 
 .toolbar_logo{
   margin-left: 1rem;
+
 }
 
-.toolbar_logo a{
-  color: white;
-  text-decoration: none;
+/* .toolbar_logo a{
+  color: #EB219B;
+  -webkit-text-fill-color: rgba(253, 90, 250, 1);
+  text-shadow: -2px -2px 0 #FFBAF2;
+  -webkit-filter: drop-shadow(3px 3px 1px #441F62);
+  -webkit-transform: skew(-5deg,-5deg);
+  font-weight: normal;
+  z-index: 2;
+  text-align: center;
+  padding-left: 50px;
   font-size: 1.5rem;
-}
+} */
 
 .toolbar_navigation-items ul{
   list-style: none;
@@ -50,7 +65,7 @@
 }
 
 .toolbar_navigation-items a{
-  color: white;
+  color: #EB219B;
   text-decoration: none;
 }
 
@@ -79,5 +94,6 @@
 @media (max-width: 375px){
   input {
     margin-bottom: 1.5em;
+
   }
 }

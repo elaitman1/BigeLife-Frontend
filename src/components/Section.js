@@ -25,11 +25,41 @@ class Section extends React.Component{
   {this.props.articles.filter(article=>{
     if (article.tag === this.props.clickedSection){
         array.push(
-        <div onClick={this.handleClick} id={article.id}>
-        <img id="simage" src={article.image} /><br />
-        <div className="stitle">{article.title}</div><br />
-        <div className="sauthor">{article.author}</div><br />
-        <div className="stag">{article.tag}</div><br />
+        <div style={{marginBottom:'13em'}} onClick={this.handleClick} id={article.id}>
+        <img style={{position:'absolute'}}src={article.image} /><br />
+        <div style={{position: 'absolute',
+        fontSize: '1.2em',
+        letterSpacing: '.1em',
+        position: 'absolute',
+        fontFamily: 'Arial Rounded MT Bold, arial',
+        padding: '1%',
+        marginLeft: '1%',
+        borderStyle: 'solid',
+        backgroundColor: 'white',
+        color: 'black',
+        wordWrap: 'break-word',
+}}>{article.title}</div><br />
+        <div style={{fontSize: '1.3em',
+        letterSpacing: '.2em',
+        position: 'absolute',
+        fontFamily: 'Arial Rounded MT Bold, arial',
+        padding: '1%',
+        marginTop: '47%',
+        marginLeft: '1%',
+        borderStyle: 'solid',
+        borderColor: 'black',
+        backgroundColor: 'white',
+        color: 'black',
+        wordWrap: 'break-word'
+}}>{article.author}</div><br />
+        <div style={{fontSize:".8em", letterSpacing: ".1em", position:"absolute", fontFamily: "Arial Rounded MT Bold, arial",
+        padding: "1%",
+        marginLeft: "5%",
+        backgroundColor: "black",
+        color: "white",
+        wordWrap: "break-word",
+        marginTop:'.5em',
+ }}>{article.tag}</div><br />
         </div>
       )
     }})}
@@ -37,19 +67,20 @@ class Section extends React.Component{
   }
 
   render()  {
-    console.log(this.props.articles)
 
     return (
-      <div>
+      <div className = 'swrapper'>
       {this.tagArticles()}
-      <h1>You May Also Like</h1>
+      <h1 className='mayAlsoLike'>You May Also Like</h1>
       <div>{this.state.youMayAlsoLike.map(article=>{
-      return  <div onClick={this.handleClick} id={article.id}>
-        <img src={article.image} /><br />
-        <div>{article.title}</div><br />
-        <div>{article.author}</div><br />
-        <div>{article.tag}</div><br />
+      return(
+      <div className="spacer" onClick={this.handleClick} id={article.id}>
+        <img className="simg" src={article.image} /><br />
+        <div className="stitle">{article.title}</div><br />
+        <div className="sauthor">{article.author}</div><br />
+        <div className="stag">{article.tag}</div><br />
         </div>
+        )
       })}
       </div>
       </div>

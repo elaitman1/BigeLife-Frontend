@@ -1,10 +1,48 @@
+@import url(https://fonts.googleapis.com/css?family=Mr+Dafoe);
+
 body {
-  margin-top: 3.4em;
+  margin-top: 7em;
   /* padding-bottom: 30em; */
   position: relative;
+  background: black;
   /* min-height: 100vh; */
   padding-bottom: 2.5rem;
   width: 100%;
+}
+
+.mayAlsoLike{
+  letter-spacing: .1em;
+  font-size: 2em;
+  text-align: left;
+  font-family: 'Mr Dafoe', cursive;
+  -webkit-text-fill-color: rgba(253, 90, 250, 1);
+  /* text-shadow: -.5px -.5px 0 #FFBAF2; */
+  /* -webkit-filter: drop-shadow(3px 3px 1px #441F62); */
+  /* -webkit-transform: skew(-1deg,-5deg); */
+  font-weight: normal;
+  z-index: 2;
+  /* margin-left: 1em; */
+  text-align: center;
+}
+
+.hslider{
+  margin-top:5em;
+}
+
+.date{
+  font-size: 1.5em;
+  text-align: left;
+  font-family: 'Mr Dafoe', cursive;
+  -webkit-text-fill-color: rgba(253, 90, 250, 1);
+  text-shadow: -.5px -.5px 0 #FFBAF2;
+  /* -webkit-filter: drop-shadow(3px 3px 1px #441F62); */
+  -webkit-transform: skew(-1deg,-5deg);
+  font-weight: normal;
+  z-index: 2;
+  /* margin-left: 1em; */
+  text-align: center;
+
+  /* background:black; */
 }
 
 .noSearchResults{
@@ -13,6 +51,63 @@ body {
   font-size: 4em;
   text-align: center;
   color: white;
+}
+
+.simg{
+  position: absolute;
+}
+.sauthor{
+  position: absolute;
+  font-size: 1.3em;
+  letter-spacing: .2em;
+  font-family: Arial Rounded MT Bold, arial;
+  padding: 1%;
+  margin-top: 48%;
+  margin-left: 1%;
+  border-style: solid;
+  border-color: black;
+  background-color: white;
+  color: black;
+  word-wrap: break-word;
+
+}
+
+img{
+  width: 100%;
+}
+
+.stitle{
+  position: absolute;
+  font-size: 1.2em;
+  letter-spacing: .1em;
+  position: absolute;
+  font-family: Arial Rounded MT Bold, arial;
+  padding: 1%;
+  margin-left: 1%;
+  border-style: solid;
+  background-color: white;
+  color: black;
+  word-wrap: break-word;
+
+}
+
+.spacer{
+  margin-bottom: 13em;
+}
+
+.stag{
+  font-size: .8em;
+  letter-spacing: .1em;
+  position: absolute;
+  font-family: Arial Rounded MT Bold, arial;
+  padding: 1%;
+  margin-left: 5%;
+  margin-top: 2%;
+  /* border-style: solid; */
+  background-color: black;
+  color: white;
+  word-wrap: break-word;
+  position:absolute;
 }
 
 
@@ -28,10 +123,6 @@ body {
     background-color: black;
     color: white;
     word-wrap: break-word;
-}
-
-#block{
-  opacity: .7;
 }
 
 #title {
@@ -65,16 +156,35 @@ body {
   color: black;
   word-wrap: break-word;
 }
+input {
+    margin-top: 1.5em;
+    width: 70%;
+    height: 2em;
+    border: solid;
+    border-color:#EB219B;
+    /* background:black; */
+    -webkit-filter: drop-shadow(3px 3px 1px #441F62);
+    /* -webkit-transform: skew(-5deg,-5deg); */
+    font-weight: normal;
+    background-color: black;
+    color: #EB219B;
+    font-size: .8em;
+    text-align: center;
+  }
 
 @media (max-width: 375px){
   input {
       margin-top: 1.5em;
       width: 70%;
       height: 2em;
-      border-style: line;
-      border-color: black;
-      background-color: #521751;
-      color: white;
+      border: solid;
+      border-color:#EB219B;
+      /* background:black; */
+      -webkit-filter: drop-shadow(3px 3px 1px #441F62);
+      /* -webkit-transform: skew(-5deg,-5deg); */
+      font-weight: normal;
+      background-color: black;
+      color: #EB219B;
       font-size: .8em;
     }
     img{
