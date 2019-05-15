@@ -15,4 +15,4 @@ export default combineReducers({
   articles: articleReducer,
   chosenArticle: chosenArticle,
   clickedSection: clickedSection
-}
+})
