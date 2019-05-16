@@ -17,7 +17,8 @@ class SearchResults extends React.Component{
   render() {
     return (
       this.props.searchResults.length === 0? <div className="noSearchResults">No results matched your search</div> :
-        this.props.searchResults.map(result=>{
+        <div className='searchresultscontainer'>
+        {this.props.searchResults.map(result=>{
         return (
           <div id={result.id} onClick={this.handleClick}>
           <div id='block'>
@@ -27,8 +28,10 @@ class SearchResults extends React.Component{
           </div>
           <img id="homepage" src={result.image}/>
           </div>
-        )})
-    )
+        )})}
+        </div>
+      )
+
   }
 }
 

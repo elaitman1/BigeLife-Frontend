@@ -8,6 +8,14 @@ class Section extends React.Component{
     youMayAlsoLike: []
   }
 
+  handleClick = (event) =>{
+    let clickedId = parseInt(event.currentTarget.id)
+    let foundArticle = this.props.articles.find(article=>article.id === clickedId)
+    this.props.chosenArticle(foundArticle)
+
+    this.props.history.push('/viewchosenarticle');
+  }
+
   componentDidMount(){
     let allOtherArticles =  this.props.articles.filter(article => article.tag !== this.props.clickedSection)
 

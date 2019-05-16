@@ -4,13 +4,18 @@ import { connect } from 'react-redux'
 import { clickedSection } from '/Users/ericlaitman/redux2/BigeLife-Frontend/src/actions/index.js'
 class SideDrawer extends React.Component {
 
-  handleClick = async (event) => {
+  handleClick = (event) => {
     this.props.clickedSection(event.target.id)
+    this.props.drawerClickHandler()
     if(this.props.location.pathname === '/section'){
       this.props.history.push('/sectiontwo')
     }else if (this.props.location.pathname === '/sectiontwo'){
       this.props.history.push('/section')
     }else if(this.props.location.pathname === '/'){
+      this.props.history.push('/section')
+    }else if(this.props.location.pathname === '/viewchosenarticle'){
+      this.props.history.push('/section')
+    }else if(this.props.location.pathname === '/viewchosenarticletwo'){
       this.props.history.push('/section')
     }
   }

@@ -3,7 +3,7 @@
   height: 20%;
   background: black;
   box-shadow: 1px 0px 7px rgba(0,0,0,0.5);
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 30%;

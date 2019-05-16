@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux';
 import { fetchArticles, chosenArticle } from '../actions';
 import './App.css'
+import './ViewChosenArticle.css'
 
 class ViewChosenArticleTwo extends React.Component{
 
@@ -10,10 +11,10 @@ class ViewChosenArticleTwo extends React.Component{
   }
 
   handleClick = (event) =>{
-
     let clickedId = parseInt(event.currentTarget.id)
     let foundArticle = this.props.articles.find(article=>article.id === clickedId)
     this.props.chosenArticle(foundArticle)
+
     this.props.history.push('/viewchosenarticle');
   }
 
@@ -34,25 +35,25 @@ class ViewChosenArticleTwo extends React.Component{
 
 
   componentDidMount() {
-
     this.randomArticle()
-
   }
 
   render()  {
+
     return (
-      <div>
-      <img src={this.props.image} />
-      {this.props.title }<br />
-      {this.props.author}<br />
-      {this.props.content}
+      <div >
+      <img className='vimage'src={this.props.image}/>
+      <div className='vtitle'>{this.props.title }</div>
+      <div className='vauthor'>{this.props.author}</div>
+      <div className="vcontent">{this.props.content}</div>
+      <div className="vtag">{this.props.tag}</div>
       <h1 className='mayAlsoLike'>You May Also Like</h1>
       <div>{this.state.youMayAlsoLike.map(article=>{
-      return  <div  onClick={this.handleClick} id={article.id}>
-        <img src={article.image} /><br />
-        <div>{article.title}</div><br />
-        <div>{article.author}</div><br />
-        <div>{article.tag}</div><br />
+      return  <div className='vcontainer' onClick={this.handleClick} id={article.id}>
+        <img className="yi" src={article.image} /><br />
+        <div className="yt">{article.title}</div><br />
+        <div className="ya">{article.author}</div><br />
+        <div className="yta">{article.tag}</div><br />
         </div>
       })}
       </div>
@@ -65,13 +66,15 @@ const mapStateToProps =
  (state, ownProps) => {
 
    if (state.chosenArticle !== undefined){
+
      return {
        title: state.chosenArticle.title,
        image: state.chosenArticle.image,
        content: state.chosenArticle.content,
        author: state.chosenArticle.author,
+       articles: state.articles,
        tag: state.chosenArticle.tag,
-       articles: state.articles
+       chosenArticleId: state.chosenArticle.id
      };
    }else{
     return {

@@ -2,8 +2,8 @@
   width: 100%;
   height: 8%;
   /* background: #521751; */
-  font-family: sans-serif;
-  position: fixed;
+  /* font-family: sans-serif; */
+  position: absolute;
   /* top:0; */
   margin-top: -.9em;
   margin-bottom:5em;
@@ -14,7 +14,10 @@
   -webkit-filter: drop-shadow(3px 3px 1px #441F62);
   /* -webkit-transform: skew(-5deg,-5deg); */
   font-weight: normal;
+  -webkit-fill-color: rgba(253, 90, 250, 1);
+
 }
+
 #searchbutton{
   display: none;
 }

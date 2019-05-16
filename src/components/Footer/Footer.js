@@ -1,20 +1,14 @@
 import React from 'react'
 import './Footer.css'
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton'
-import './Footer.css'
-// <DrawerToggleButton click={props.drawerClickHandler}/>
+import './FooterLogo.css'
+
 const footer = props => (
   <div className="footer">
-    <nav className="footer_navigation">
-      <div className="footer_toggle-button">
-      </div>
-      <div className="footer_logo"><a href="/"></a></div>
-      <div className="spacer"></div>
-      <div className="footer_navigation-items">
-        <ul>
-        </ul>
-      </div>
-    </nav>
+  <div className="mac" id="fwrapper">
+  <h3 class="ffuture">Big E</h3>
+  <h1 class="fcop">Life</h1>
+  </div>
   </div>
 )
 

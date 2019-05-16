@@ -1,11 +1,21 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import { chosenArticle } from '../actions';
+
+
 import './Section.css'
 class SectionTwo extends React.Component{
 
   state = {
     youMayAlsoLike: []
+  }
+
+  handleClick = (event) =>{
+    let clickedId = parseInt(event.currentTarget.id)
+    let foundArticle = this.props.articles.find(article=>article.id === clickedId)
+    this.props.chosenArticle(foundArticle)
+
+    this.props.history.push('/viewchosenarticletwo');
   }
 
   componentDidMount(){
@@ -18,6 +28,18 @@ class SectionTwo extends React.Component{
     let pickedOne = results[0];
     let pickedTwo = results[1];
     this.setState({youMayAlsoLike:[pickedOne, pickedTwo]})
+  }
+
+  handleClick = (event) => {
+    debugger
+    this.props.clickedSection(event.target.id)
+    if(this.props.location.pathname === '/section'){
+      this.props.history.push('/sectiontwo')
+    }else if (this.props.location.pathname === '/sectiontwo'){
+      this.props.history.push('/section')
+    }else if(this.props.location.pathname === '/'){
+      this.props.history.push('/section')
+    }
   }
 
   tagArticles = () => {

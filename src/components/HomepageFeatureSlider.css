@@ -1,5 +1,7 @@
 .FeatureSlider {
   width: 100%;
+  /* margin-bottom: 1em; */
+  margin-top: 1em;
 }
 
 .ftypetag{
@@ -28,8 +30,6 @@
   color: black;
   word-wrap: break-word;
 }
-
-
 
 .fauthor{
   font-size: 1.4em;
