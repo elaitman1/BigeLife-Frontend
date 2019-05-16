@@ -33,24 +33,6 @@
   padding: 0 1rem;
 }
 
-.toolbar_logo{
-  margin-left: 1rem;
-
-}
-
-/* .toolbar_logo a{
-  color: #EB219B;
-  -webkit-text-fill-color: rgba(253, 90, 250, 1);
-  text-shadow: -2px -2px 0 #FFBAF2;
-  -webkit-filter: drop-shadow(3px 3px 1px #441F62);
-  -webkit-transform: skew(-5deg,-5deg);
-  font-weight: normal;
-  z-index: 2;
-  text-align: center;
-  padding-left: 50px;
-  font-size: 1.5rem;
-} */
-
 .toolbar_navigation-items ul{
   list-style: none;
   margin: 0;
@@ -94,7 +76,14 @@
   }
 }
 
-@media (max-width: 375px){
+@media (min-width: 380px){
+  input{
+    margin-bottom: 1.5em;
+  }
+}
+
+
+@media (max-width: 379px){
   input {
     margin-bottom: 1.5em;
 

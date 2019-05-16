@@ -46,6 +46,17 @@
   word-wrap: break-word;
 }
 
+
+
+@media (min-width: 380px){
+  .FeatureSlider {
+    width: 100%;
+    height: 17em;
+    /* margin-bottom: 1em; */
+    margin-top: 1em;
+  }
+}
+
 /* @media (max-width: 375px){
   input {
       margin-left: 20%;

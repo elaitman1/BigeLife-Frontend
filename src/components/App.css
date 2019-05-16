@@ -10,6 +10,11 @@ body {
   width: 100%;
 }
 
+.gridWrapper{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
 .mayAlsoLike{
   letter-spacing: .1em;
   font-size: 2em;

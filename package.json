@@ -15,7 +15,9 @@
     "react-scripts": "3.0.0",
     "react-slick": "^0.24.0",
     "react-time": "^4.3.0",
+    "react-window-size": "^1.2.2",
     "redux": "^4.0.1",
+    "redux-responsive": "^4.3.8",
     "redux-thunk": "^2.3.0",
     "slick-carousel": "^1.8.1"
   },
