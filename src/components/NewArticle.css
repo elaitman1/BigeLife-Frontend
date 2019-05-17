@@ -5,6 +5,14 @@
   margin-left: 14em;
 }
 
+#newArticleForm{
+  margin-left: 3em;
+}
+
+.newArticleWrapper{
+  margin-top: 5em;
+}
+
 @media (max-width: 375px){
       #contentBox {
         /* word-wrap: break-word; */

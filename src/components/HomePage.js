@@ -85,7 +85,6 @@ class HomePage extends React.Component{
     }
 
     setHomepageGridArticles = () => {
-      debugger
       if (this.props.articles.length === 0){
         return <div>loading...</div>
       }

@@ -15,7 +15,6 @@ class newArticle extends React.Component {
   }
 
   handleSubmit= async (event) => {
-    debugger
     event.preventDefault()
     await fetch('http://localhost:3000/api/v1/articles', {
         method: "POST",
@@ -44,6 +43,7 @@ class newArticle extends React.Component {
 
   render() {
     return (
+      <div className='newArticleWrapper'>
       <form onSubmit={this.handleSubmit}>
       <input onChange={this.handleChange} id='newArticleForm' placeHolder='title' />
       <input onChange={this.handleChange}id='newArticleForm' placeHolder='author' />
@@ -52,6 +52,7 @@ class newArticle extends React.Component {
       <textarea onChange={this.handleChange}id='contentBox' placeHolder='content' />
       <button className="newButton" type='submit'>Submit</button>
       </form>
+      </div>
 
     )
   }

@@ -31,7 +31,6 @@ class SectionTwo extends React.Component{
   }
 
   handleClick = (event) => {
-    debugger
     this.props.clickedSection(event.target.id)
     if(this.props.location.pathname === '/section'){
       this.props.history.push('/sectiontwo')
