@@ -195,7 +195,7 @@ input {
     text-align: center;
   }
 
-@media (max-width: 379px){
+@media (max-width: 375px){
   input {
       margin-top: 1.5em;
       width: 70%;
@@ -217,8 +217,10 @@ input {
       height: 10em;
       padding-top: 2em;
     }
-    img#homepage{
-    }
+}
 
-
+@media (max-width: 768px){
+  img{
+    height: 25em;
+  }
 }
