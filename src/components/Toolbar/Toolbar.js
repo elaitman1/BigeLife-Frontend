@@ -11,10 +11,13 @@ class toolbar extends React.Component{
 
   handleSubmit = (event) => {
       event.preventDefault()
+      debugger
       let array = []
       let search = this.props.Search
       let stateArray = this.props.Articles
-
+      if(search.toString() === "[object Object]"){
+        return window.alert('Must type something to search.')
+      }
       stateArray.filter(object=>{
 
         if(object.author.toLowerCase().includes(search.toLowerCase()) || object.content.toLowerCase().includes(search.toLowerCase()) || object.title.toLowerCase().includes(search.toLowerCase()))
@@ -26,7 +29,7 @@ class toolbar extends React.Component{
       this.props.history.push('/searchresults')
       event.target.reset()
     }
-    
+
   render(){
     return(
     <div className="toolbar">
