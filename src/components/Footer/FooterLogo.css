@@ -34,12 +34,13 @@
   font-family: 'Monoton', cursive;
   font-size: 10em;
   line-height: 1;
-  margin-bottom: 1em;
-  margin-top: .6em;
+  /* margin-bottom: 1em; */
+  /* margin-top: .6em; */
   padding-top: -1em;
   /* margin-top: -.2em; */
   /* padding-left: .1em; */
   /* font-weight: normal; */
+  margin-bottom:-1em;
   background-image: -webkit-linear-gradient(#022486 0%, #0AD0FD 30%, #BDFCFC 40%, #D8FFFF 44%, #00081C 44%, #00081C 50%, #074A67 52%, #1CD8FE 60%, #7FEDFE 62%, #96F5FC 70%, #0FD8FA 73%, #0BD2FD 88%, #AFFDFF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

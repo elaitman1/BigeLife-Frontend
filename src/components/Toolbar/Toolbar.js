@@ -26,27 +26,7 @@ class toolbar extends React.Component{
       this.props.history.push('/searchresults')
       event.target.reset()
     }
-
-  // componentDidMount = () => {
-  //   window.addEventListener('scroll', this.handleScroll);
-  // }
-
-    // handleScroll = () => {
-    //   var sticky = header.offsetTop;
-    //   if (window.pageYOffset > sticky) {
-    //      header.classList.add("sticky");
-    //    } else {
-    //      header.classList.remove("sticky");
-    //    }
-    // }
-
-
-
-
-    // this.handleScroll()?
-    // <header className="toolbar" style={{position:'absolute'}}>
-    // :
-    // <header className="toolbar" style={{position:'sticky'}}>
+    
   render(){
     return(
     <div className="toolbar">

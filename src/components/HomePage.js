@@ -54,9 +54,10 @@ class HomePage extends React.Component{
         return <div>loading...</div>
       }
       let array = []
-      let x = this.props.articles.length - 12
+      let x = this.props.articles.length - 11
 
       for(let i=this.props.articles.length - 8; i>= x; i-- ){
+        let summary = this.props.articles[i].content.split(' ').slice(0,20).join(' ')
         array.push(<div id={this.props.articles[i].id} onClick={this.handleClick}>
           <div id='block'>
           <div id="title">{this.props.articles[i].title}</div>
@@ -64,6 +65,7 @@ class HomePage extends React.Component{
           <div className="author">{this.props.articles[i].author}</div>
           </div>
           <img id="homepage" src={this.props.articles[i].image}/>
+          <div className="summary">{summary}...</div>
           </div>
         )
       }
@@ -98,7 +100,7 @@ class HomePage extends React.Component{
           <div id="typetag">{this.props.articles[i].tag}</div>
           <div className="author">{this.props.articles[i].author}</div>
           </div>
-          <img id="homepage" src={this.props.articles[i].image}/>
+          <img id="mediumHomepage" src={this.props.articles[i].image}/>
           </div>
         )
       }
@@ -154,11 +156,16 @@ class HomePage extends React.Component{
            </div>
         </Slider>
         }
-          <div>{this.props.size.medium?
-          [this.setHomepageGridArticles(),
-          this.handleHomePageArticlesMedium()]
-          :
-          this.handleHomePageArticlesSmall()
+        <div>{this.props.size.medium?
+        <div className="flexContainerOne">{this.setHomepageGridArticles()}</div>
+        :
+        this.handleHomePageArticlesSmall()
+        }</div>
+        <h1 style={{color:'white', textAlign:'center', fontSize:'4em'}}>Smarter Living</h1>
+        <div>{this.props.size.medium?
+        <div className="flexContainerTwo">{this.handleHomePageArticlesMedium()}</div>
+        :
+        <></>
         }</div>
       </div>
     )
@@ -181,3 +188,10 @@ export default connect(
   mapStateToProps,
   { fetchArticles, chosenArticle }
 )(HomePage);
+
+
+// <div>{this.props.size.medium?
+// this.setHomepageGridArticles()
+// :
+// this.handleHomePageArticlesSmall()
+// }</div>

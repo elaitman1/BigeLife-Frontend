@@ -1,7 +1,6 @@
 .FeatureSlider {
   width: 100%;
   /* margin-bottom: 1em; */
-  margin-top: 1em;
 }
 
 .ftypetag{
@@ -59,6 +58,16 @@
 
 @media (max-width: 768px){
   .FeatureSlider{
-    height: 25em;
+    height: 24em;
   }
+  .ftitle{
+    margin-top:1.8em;
+  }
+  .fauthor{
+    margin-top:14em;
+  }
+  .ftypetag{
+    margin-left:1.5em;
+  }
+
 }
