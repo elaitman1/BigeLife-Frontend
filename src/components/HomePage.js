@@ -159,11 +159,12 @@ class HomePage extends React.Component{
         <div>{this.props.size.medium?
         <div className="flexContainerOne">{this.setHomepageGridArticles()}</div>
         :
-        this.handleHomePageArticlesSmall()
+        [<div className="flexContainerOne">{this.setHomepageGridArticles()}</div>,
+        this.handleHomePageArticlesSmall()]
         }</div>
-        <h1 style={{color:'white', textAlign:'center', fontSize:'4em'}}>Smarter Living</h1>
         <div>{this.props.size.medium?
-        <div className="flexContainerTwo">{this.handleHomePageArticlesMedium()}</div>
+        [<h1 style={{color:'white', textAlign:'center', fontSize:'4em'}}>Smarter Living</h1>,
+        <div className="flexContainerTwo">{this.handleHomePageArticlesMedium()}</div>]
         :
         <></>
         }</div>

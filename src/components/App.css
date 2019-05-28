@@ -3,18 +3,8 @@
 
 body {
   margin-top: 7em;
-  /* padding-bottom: 30em; */
-  /* position: relative; */
   background: black;
-  /* min-height: 100vh; */
-  /* padding-bottom: 2.5rem; */
   width: 100%;
-}
-
-
-.gridWrapper{
-  display: grid;
-  grid-template-columns: 50% 50%;
 }
 
 .mayAlsoLike{
@@ -23,17 +13,13 @@ body {
   text-align: left;
   font-family: 'Mr Dafoe', cursive;
   -webkit-text-fill-color: rgba(253, 90, 250, 1);
-  /* text-shadow: -.5px -.5px 0 #FFBAF2; */
-  /* -webkit-filter: drop-shadow(3px 3px 1px #441F62); */
-  /* -webkit-transform: skew(-1deg,-5deg); */
   font-weight: normal;
   z-index: 2;
-  /* margin-left: 1em; */
   text-align: center;
 }
 
 .hslider{
-  margin-top:5em;
+  margin-top:9em;
 }
 
 .date{
@@ -42,47 +28,30 @@ body {
   font-family: 'Mr Dafoe', cursive;
   -webkit-text-fill-color: rgba(253, 90, 250, 1);
   text-shadow: -.5px -.5px 0 #FFBAF2;
-  /* -webkit-filter: drop-shadow(3px 3px 1px #441F62); */
   -webkit-transform: skew(-1deg,-5deg);
   font-weight: normal;
   z-index: 2;
-  /* margin-left: 1em; */
   text-align: center;
 
-  /* background:black; */
 }
-
-/* #block{
-  margin:1em;
-} */
-
 .searchresultscontainer{
   margin-top: 5em;
 }
 .noSearchResults{
   letter-spacing: .1em;
-  /* position: absolute; */
   left: 0;
-  /* top: 2.5em; */
-  /* font-family: 'Mr Dafoe', cursive; */
   font-size: 3em;
   margin-top: 1.8em;
-  /* margin-bottom: 0; */
   color: #EB219B;
   -webkit-text-fill-color: rgba(253, 90, 250, 1);
-  /* text-shadow: -2px -2px 0 #FFBAF2; */
-  /* -webkit-filter: drop-shadow(3px 3px 1px #441F62); */
-  /* -webkit-transform: skew(-5deg,-5deg); */
   font-weight: normal;
   z-index: 2;
-  /* margin-left: 1em; */
   text-align: center;
-  /* padding-left: 50px; */
 }
 
 .simg{
   position: absolute;
-    height: 268.59px;
+  height: 268.59px;
 }
 .sauthor{
   position: absolute;
@@ -220,16 +189,17 @@ input {
       padding-top: 2em;
     }
     .searchresultscontainer{
-      margin-top: 7em;
+      margin-top: 5em;
       grid-template-columns:1fr;
       display:grid;
-      grid-column-gap: .5em;
-      grid-row-gap: .5em;
+      /* grid-column-gap: .5em; */
+      /* grid-row-gap: .5em; */
     }
 
 }
 
 @media (max-width: 769px){
+
   .flexContainerOne{
     display:grid;
     grid-template-columns: 50% 50%;
@@ -254,33 +224,38 @@ input {
     text-align:center;
   }
   .author{
-    margin-top: 10.7em;
+    margin-top: 9.7em;
     font-size:.9em;
-
   }
   #title{
     font-size:.9em;
     margin-top:.5em;
   }
   #typetag{
-    margin-top:8em;
+    margin-top:5.5em;
     margin-left: 1.5em;
     font-size:.1em;
     padding:.3em;
   }
   .searchresultscontainer{
-    /* margin-top: 7em;
-    grid-template-columns:1fr 1fr;
+    /* padding-top: 4em; */
+    margin-top: 9em;
+     grid-template-columns:1fr 1fr;
     display:grid;
     grid-column-gap: .5em;
-    grid-row-gap: .5em; */
+    grid-row-gap: .5em;
+  }
+}
+
+  @media (max-width: 375px){
+  .flexContainerOne{
+    width:100%;
+    display:grid;
+    margin-top:.2em;
+    grid-template-columns: 1fr;
+    grid-column-gap: 0em;
+    grid-row-gap: 0em;
+
   }
 
 }
-
-/* id="title">{this.props.articles[i].title}</div>
-<div id="typetag">{this.props.articles[i].tag}</div>
-<div className="author">{this.props.articles[i].author}</div>
-</div>
-<img id="homepage" src={this.props.articles[i].image}/>
-<div className="summary">{s */

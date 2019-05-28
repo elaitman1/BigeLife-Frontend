@@ -11,7 +11,6 @@ class toolbar extends React.Component{
 
   handleSubmit = (event) => {
       event.preventDefault()
-      debugger
       let array = []
       let search = this.props.Search
       let stateArray = this.props.Articles
