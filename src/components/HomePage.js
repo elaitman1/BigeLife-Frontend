@@ -118,17 +118,18 @@ class HomePage extends React.Component{
         infinite: true,
         autoplay: true,
         useCss: true,
-        autoplaySpeed: 1,
+        autoplaySpeed: 150,
         arrows: false,
         // slidesToShow: 1,
         // slidesToScroll: 1
       }
 
     return (
-        <div className="wholeUpperHalf">
+        <div>
         {this.state.featuredArticles.length === 0?
           <div>loading...</div>
           :
+
         <Slider {...settings} className="hslider">
         <div id={this.state.featuredArticles[0].id} onClick={this.handleClick}>
         <div className='fblock'>
@@ -162,9 +163,16 @@ class HomePage extends React.Component{
         [<div className="flexContainerOne">{this.setHomepageGridArticles()}</div>,
         this.handleHomePageArticlesSmall()]
         }</div>
+
         <div>{this.props.size.medium?
         [<h1 style={{color:'white', textAlign:'center', fontSize:'4em'}}>Smarter Living</h1>,
         <div className="flexContainerTwo">{this.handleHomePageArticlesMedium()}</div>]
+        :
+        <></>
+        }</div>
+
+        <div>{this.props.size.infinity?
+        [this.setHomepageGridArticles,this.handleHomePageArticlesMedium]
         :
         <></>
         }</div>

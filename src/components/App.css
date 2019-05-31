@@ -165,6 +165,64 @@ input {
     font-size: .8em;
     text-align: center;
   }
+  @media (min-width: 770px){
+    input{
+      margin-bottom:1.5em;
+    }
+    .fblock{
+      grid-template-columns:1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      display:grid;
+    }
+    .FeatureSlider{
+      grid-column-start:1;
+      grid-column-end:3;
+      grid-row-start:1;
+      grid-row-end:3;
+      height:25em;
+      margin-bottom:1em;
+    }
+    .fauthor{
+      font-size: 1.3em;
+      letter-spacing: .2em;
+      position: absolute;
+      font-family: Arial Rounded MT Bold, arial;
+      padding: .5em;
+      margin-top: 16em;
+      margin-left: 1em;
+      border-style: solid;
+      border-color: black;
+      background-color: white;
+      color: black;
+      word-wrap: break-word;
+    }
+    .ftypetag{
+      margin-left:3.5em;
+      margin-top:6.5em;
+      font-size: .8em;
+      letter-spacing: .1em;
+      position: absolute;
+      font-family: Arial Rounded MT Bold, arial;
+      padding: .2%;
+      background-color: black;
+      color: white;
+      word-wrap: break-word;
+    }
+    .ftitle {
+      font-size: 1.2em;
+      letter-spacing: .1em;
+      position: absolute;
+      font-family: Arial Rounded MT Bold, arial;
+      padding: .5em;
+      margin-top:.5em;
+      margin-left: .3%;
+      border-style: solid;
+      background-color: white;
+      color: black;
+      word-wrap: break-word;
+    }
+
+  }
 
   @media (min-width: 376px) and (max-width: 769px) {
 
@@ -208,7 +266,7 @@ input {
     .searchresultscontainer{
       /* padding-top: 4em; */
       margin-top: 9em;
-       grid-template-columns:1fr 1fr;
+      grid-template-columns:1fr 1fr;
       display:grid;
       grid-column-gap: .5em;
       grid-row-gap: .5em;

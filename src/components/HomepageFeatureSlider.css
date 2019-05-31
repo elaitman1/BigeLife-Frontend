@@ -1,29 +1,4 @@
-.ftypetag{
-  font-size: .8em;
-  letter-spacing: .1em;
-  position: absolute;
-  font-family: Arial Rounded MT Bold, arial;
-  padding: .2%;
-  margin-top: 2.4%;
-  margin-left: .9%;
-  background-color: black;
-  color: white;
-  word-wrap: break-word;
-}
 
-.ftitle {
-  font-size: 1.2em;
-  letter-spacing: .1em;
-  position: absolute;
-  font-family: Arial Rounded MT Bold, arial;
-  padding: .2%;
-  margin-top: .6%;
-  margin-left: .3%;
-  border-style: solid;
-  background-color: white;
-  color: black;
-  word-wrap: break-word;
-}
 
 
 
@@ -49,15 +24,60 @@
     color: black;
     word-wrap: break-word;
   }
+  .ftypetag{
+    font-size: .8em;
+    letter-spacing: .1em;
+    position: absolute;
+    font-family: Arial Rounded MT Bold, arial;
+    padding: .2%;
+    margin-top: 2.4%;
+    margin-left: .9%;
+    background-color: black;
+    color: white;
+    word-wrap: break-word;
+  }
+
+  .ftitle {
+    font-size: 1.2em;
+    letter-spacing: .1em;
+    position: absolute;
+    font-family: Arial Rounded MT Bold, arial;
+    padding: .2%;
+    margin-top: .6%;
+    margin-left: .3%;
+    border-style: solid;
+    background-color: white;
+    color: black;
+    word-wrap: break-word;
+  }
 }
 
 @media (max-width: 769px) and (min-width:376px){
-  .ftitle{
+  .ftitle {
+    font-size: 1.2em;
+    letter-spacing: .1em;
+    position: absolute;
+    font-family: Arial Rounded MT Bold, arial;
+    padding: .2%;
     margin-top:.5em;
+    margin-left: .3%;
+    border-style: solid;
+    background-color: white;
+    color: black;
+    word-wrap: break-word;
   }
   .ftypetag{
     margin-left:1.5em;
     margin-top:4.5em;
+    font-size: .8em;
+    letter-spacing: .1em;
+    position: absolute;
+    font-family: Arial Rounded MT Bold, arial;
+    padding: .2%;
+    background-color: black;
+    color: white;
+    word-wrap: break-word;
+
   }
   .fauthor{
     font-size: 1.4em;

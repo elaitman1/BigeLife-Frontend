@@ -19,7 +19,7 @@ export default combineReducers({
         extraSmall: 380,
         // small: 700,
         medium: 769,
-        // large: 1280,
+        // large: 770,
         // extraLarge: 1400,
         infinity: "veryBig",
         extraFields: ({ greaterThan, is }) => ({
