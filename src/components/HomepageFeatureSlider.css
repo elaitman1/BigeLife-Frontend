@@ -1,8 +1,3 @@
-.FeatureSlider {
-  width: 100%;
-  height: 22em;
-}
-
 .ftypetag{
   font-size: .8em;
   letter-spacing: .1em;
@@ -30,20 +25,7 @@
   word-wrap: break-word;
 }
 
-.fauthor{
-  font-size: 1.4em;
-  letter-spacing: .2em;
-  position: absolute;
-  font-family: Arial Rounded MT Bold, arial;
-  padding: .2%;
-  margin-top: 13em;
-  margin-left: .3%;
-  border-style: solid;
-  border-color: black;
-  background-color: white;
-  color: black;
-  word-wrap: break-word;
-}
+
 
 
 
@@ -51,20 +33,47 @@
   .FeatureSlider {
     width: 100%;
     height: 17em;
-
+    margin-top:1em;
   }
   .fauthor{
-    margin-top:10em;
+    font-size: 1.4em;
+    letter-spacing: .2em;
+    position: absolute;
+    font-family: Arial Rounded MT Bold, arial;
+    padding: .2%;
+    margin-top: 10em;
+    margin-left: .3%;
+    border-style: solid;
+    border-color: black;
+    background-color: white;
+    color: black;
+    word-wrap: break-word;
   }
 }
 
-@media (max-width: 769px, min-width: 376px){
+@media (max-width: 769px) and (min-width:376px){
   .ftitle{
-    margin-top:1.8em;
+    margin-top:.5em;
   }
-
   .ftypetag{
     margin-left:1.5em;
+    margin-top:4.5em;
   }
-
+  .fauthor{
+    font-size: 1.4em;
+    letter-spacing: .2em;
+    font-family: Arial Rounded MT Bold, arial;
+    padding: .1em;
+    margin-top: 11.5em;
+    margin-left: .3%;
+    border-style: solid;
+    border-color: black;
+    background-color: white;
+    color: black;
+    word-wrap: break-word;
+    position:absolute;
+  }
+  .FeatureSlider{
+    height:20em;
+  }
 }

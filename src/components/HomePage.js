@@ -23,7 +23,8 @@ class HomePage extends React.Component{
     let foundArticle = this.props.articles.find(article=>article.id === id)
 
     this.props.chosenArticle(foundArticle)
-    this.props.history.push('/viewchosenarticle');
+    this.props.history.push('/viewchosenarticle')
+    window.scrollTo(0, 0)
   }
 
     handleHomePageArticlesSmall = () => {
@@ -105,7 +106,6 @@ class HomePage extends React.Component{
         )
       }
       return array
-
     }
 
 
@@ -118,20 +118,20 @@ class HomePage extends React.Component{
         infinite: true,
         autoplay: true,
         useCss: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 1,
         arrows: false,
         // slidesToShow: 1,
         // slidesToScroll: 1
       }
 
     return (
-        <div>
+        <div className="wholeUpperHalf">
         {this.state.featuredArticles.length === 0?
           <div>loading...</div>
           :
         <Slider {...settings} className="hslider">
         <div id={this.state.featuredArticles[0].id} onClick={this.handleClick}>
-         <div className='fblock'>
+        <div className='fblock'>
          <div className="ftitle">{this.state.featuredArticles[0].title}</div>
          <div className="ftypetag">{this.state.featuredArticles[0].tag}</div>
          <div className="fauthor">{this.state.featuredArticles[0].author}</div>

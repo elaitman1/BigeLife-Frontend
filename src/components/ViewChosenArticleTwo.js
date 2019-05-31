@@ -16,6 +16,7 @@ class ViewChosenArticleTwo extends React.Component{
     this.props.chosenArticle(foundArticle)
 
     this.props.history.push('/viewchosenarticle');
+    window.scrollTo(0, 0)
   }
 
 

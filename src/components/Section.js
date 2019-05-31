@@ -14,6 +14,7 @@ class Section extends React.Component{
     this.props.chosenArticle(foundArticle)
 
     this.props.history.push('/viewchosenarticle');
+    window.scrollTo(0, 0)
   }
 
   componentDidMount(){
@@ -33,9 +34,10 @@ class Section extends React.Component{
   {this.props.articles.filter(article=>{
     if (article.tag === this.props.clickedSection){
         array.push(
-        <div style={{marginBottom:'13em'}} onClick={this.handleClick} id={article.id}>
-        <img style={{position:'absolute'}}src={article.image} /><br />
+        <div style={{marginBottom:'13em', marginTop:'7em', marginBottom:'17em'}} onClick={this.handleClick} id={article.id}>
+        <img style={{position:'absolute', marginTop:'-2em', height:'20em'}}src={article.image} /><br />
         <div style={{position: 'absolute',
+        marginTop:'-2em',
         fontSize: '1.2em',
         letterSpacing: '.1em',
         position: 'absolute',
@@ -52,7 +54,7 @@ class Section extends React.Component{
         position: 'absolute',
         fontFamily: 'Arial Rounded MT Bold, arial',
         padding: '1%',
-        marginTop: '47%',
+        marginTop: '9em',
         marginLeft: '1%',
         borderStyle: 'solid',
         borderColor: 'black',
@@ -62,11 +64,11 @@ class Section extends React.Component{
 }}>{article.author}</div><br />
         <div style={{fontSize:".8em", letterSpacing: ".1em", position:"absolute", fontFamily: "Arial Rounded MT Bold, arial",
         padding: "1%",
-        marginLeft: "5%",
+        marginLeft: "1em",
         backgroundColor: "black",
         color: "white",
         wordWrap: "break-word",
-        marginTop:'.5em',
+        marginTop:'-2.5em',
  }}>{article.tag}</div><br />
         </div>
       )
