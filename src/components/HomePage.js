@@ -125,11 +125,10 @@ class HomePage extends React.Component{
       }
 
     return (
-        <div>
-        {this.state.featuredArticles.length === 0?
+      <div>
+        <div>{this.state.featuredArticles.length === 0?
           <div>loading...</div>
           :
-
         <Slider {...settings} className="hslider">
         <div id={this.state.featuredArticles[0].id} onClick={this.handleClick}>
         <div className='fblock'>
@@ -156,26 +155,21 @@ class HomePage extends React.Component{
            </div>
            </div>
         </Slider>
-        }
-        <div>{this.props.size.medium?
-        <div className="flexContainerOne">{this.setHomepageGridArticles()}</div>
-        :
-        [<div className="flexContainerOne">{this.setHomepageGridArticles()}</div>,
-        this.handleHomePageArticlesSmall()]
-        }</div>
+      }</div>
 
         <div>{this.props.size.medium?
-        [<h1 style={{color:'white', textAlign:'center', fontSize:'4em'}}>Smarter Living</h1>,
+        [<div className="flexContainerOne">{this.setHomepageGridArticles()}</div>,
+        <h1 style={{color:'white', textAlign:'center', fontSize:'4em'}}>Smarter Living</h1>,
         <div className="flexContainerTwo">{this.handleHomePageArticlesMedium()}</div>]
         :
-        <></>
-        }</div>
-
-        <div>{this.props.size.infinity?
-        [this.setHomepageGridArticles,this.handleHomePageArticlesMedium]
+        this.props.size.small?
+        [<div className="flexContainerOne">{this.setHomepageGridArticles()}</div>,
+        this.handleHomePageArticlesSmall()]
         :
-        <></>
-        }</div>
+        this.props.size.infinity?
+        this.handleHomePageArticlesMedium()
+        :
+        <></>}</div>
       </div>
     )
   }
