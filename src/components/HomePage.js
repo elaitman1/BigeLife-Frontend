@@ -129,6 +129,7 @@ class HomePage extends React.Component{
         <div>{this.state.featuredArticles.length === 0?
           <div>loading...</div>
           :
+        <div className='infinityHomePage'>
         <Slider {...settings} className="hslider">
         <div id={this.state.featuredArticles[0].id} onClick={this.handleClick}>
         <div className='fblock'>
@@ -155,6 +156,11 @@ class HomePage extends React.Component{
            </div>
            </div>
         </Slider>
+        <div>{this.props.size.infinity?
+        <div className="flexContainerOne">{this.setHomepageGridArticles()}</div>
+        :
+        <></>}</div>
+        </div>
       }</div>
 
         <div>{this.props.size.medium?
@@ -166,8 +172,9 @@ class HomePage extends React.Component{
         [<div className="flexContainerOne">{this.setHomepageGridArticles()}</div>,
         this.handleHomePageArticlesSmall()]
         :
-        this.props.size.infinity?
-        this.handleHomePageArticlesMedium()
+        <></>}</div>
+        <div>{this.props.size.infinity?
+        <div className="flexContainerTwo">{this.handleHomePageArticlesMedium()}</div>
         :
         <></>}</div>
       </div>
@@ -184,8 +191,6 @@ const mapStateToProps =
        size:state.browser.is
      };
    }
-
-
 
 export default connect(
   mapStateToProps,
