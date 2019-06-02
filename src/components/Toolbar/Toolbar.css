@@ -1,5 +1,5 @@
 .toolbar{
-  width: 100%;
+  width: 88%;
   height: 8%;
   position: absolute;
   margin-top: -.9em;
@@ -11,7 +11,7 @@
   -webkit-filter: drop-shadow(3px 3px 1px #441F62);
   font-weight: normal;
   -webkit-fill-color: rgba(253, 90, 250, 1);
-
+  margin-left:-.2em;
 }
 
 #searchbutton{

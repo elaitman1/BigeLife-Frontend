@@ -59,16 +59,32 @@ class HomePage extends React.Component{
 
       for(let i=this.props.articles.length - 8; i>= x; i-- ){
         let summary = this.props.articles[i].content.split(' ').slice(0,20).join(' ')
-        array.push(<div id={this.props.articles[i].id} onClick={this.handleClick}>
-          <div id='block'>
-          <div id="title">{this.props.articles[i].title}</div>
-          <div id="typetag">{this.props.articles[i].tag}</div>
-          <div className="author">{this.props.articles[i].author}</div>
-          </div>
-          <img id="homepage" src={this.props.articles[i].image}/>
-          <div className="summary">{summary}...</div>
-          </div>
-        )
+
+        if(this.props.size === 'infinity'){
+        array.push(
+            <div id={this.props.articles[i].id} onClick={this.handleClick}>
+            <div id='block'>
+            <div id="title">{this.props.articles[i].title}</div>
+            <div id="typetag">{this.props.articles[i].tag}</div>
+            <div className="author">{this.props.articles[i].author}</div>
+            </div>
+            <img id="homepage" src={this.props.articles[i].image}/>
+            <div className="summary">{summary}...</div>
+            </div>
+          )
+        }else{
+            array.push(
+                <div id={this.props.articles[i].id} onClick={this.handleClick}>
+                <div id='block'>
+                <div id="ititle">{this.props.articles[i].title}</div>
+                <div id="itypetag">{this.props.articles[i].tag}</div>
+                <div className="iauthor">{this.props.articles[i].author}</div>
+                </div>
+                <img id="homepage" src={this.props.articles[i].image}/>
+                <div className="summary">{summary}...</div>
+                </div>
+              )
+          }
       }
       return array
     }
@@ -118,12 +134,11 @@ class HomePage extends React.Component{
         infinite: true,
         autoplay: true,
         useCss: true,
-        autoplaySpeed: 150,
+        autoplaySpeed: 2000,
         arrows: false,
         // slidesToShow: 1,
         // slidesToScroll: 1
       }
-
     return (
       <div>
         <div>{this.state.featuredArticles.length === 0?
@@ -161,14 +176,15 @@ class HomePage extends React.Component{
         :
         <></>}</div>
         </div>
-      }</div>
-
+        }</div>
         <div>{this.props.size.medium?
         [<div className="flexContainerOne">{this.setHomepageGridArticles()}</div>,
         <h1 style={{color:'white', textAlign:'center', fontSize:'4em'}}>Smarter Living</h1>,
         <div className="flexContainerTwo">{this.handleHomePageArticlesMedium()}</div>]
         :
-        this.props.size.small?
+        <></>
+        }</div>
+        <div>{this.props.size.small?
         [<div className="flexContainerOne">{this.setHomepageGridArticles()}</div>,
         this.handleHomePageArticlesSmall()]
         :

@@ -16,9 +16,9 @@ export default combineReducers({
   chosenArticle: chosenArticle,
   clickedSection: clickedSection,
   browser: createResponsiveStateReducer({
-        extraSmall: 380,
+        small: 375,
         // small: 700,
-        medium: 769,
+        medium: 1100,
         // large: 770,
         // extraLarge: 1400,
         infinity: "veryBig",

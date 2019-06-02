@@ -1,13 +1,7 @@
 .footer{
-  /* padding-top:4em; */
   width: 100%;
-  font-family: sans-serif;
   bottom: 0;
   position: relative;
-  -webkit-filter: drop-shadow(3px 3px 1px #441F62);
-  /* -webkit-transform: skew(-5deg,-5deg); */
-  font-weight: normal;
-  /* position: absolute; */
 }
 
 @media (max-width: 768px) {

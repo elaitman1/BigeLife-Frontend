@@ -22,7 +22,9 @@ const store = createStore(
 
 ReactDOM.render(
   <Provider store={store} >
+  <div className='around'>
     <App />
+  </div>
   </Provider>,
   document.querySelector('#root')
 );

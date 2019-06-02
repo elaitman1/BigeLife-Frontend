@@ -169,7 +169,50 @@ input {
 
 
 
-  @media (min-width: 770px){
+  @media (min-width: 1101px){
+    /* last four articles on homepage */
+    #itypetag {
+        font-size: .8em;
+        letter-spacing: .1em;
+        position: absolute;
+        font-family: Arial Rounded MT Bold, arial;
+        padding: .3em;
+        margin-left: 2em;
+        margin-top: 8em;
+        /* border-style: solid; */
+        background-color: black;
+        color: white;
+        word-wrap: break-word;
+    }
+    #ititle {
+      font-size: 1.3em;
+      letter-spacing: .1em;
+      position: absolute;
+      font-family: Arial Rounded MT Bold, arial;
+      padding: .3em;
+      margin-top: 4%;
+      margin-left: 1%;
+      /* margin: 1%; */
+      border-style: solid;
+      background-color: white;
+      color: black;
+      word-wrap: break-word;
+    }
+    .iauthor{
+      font-size: 1.8em;
+      letter-spacing: .2em;
+      position: absolute;
+      font-family: Arial Rounded MT Bold, arial;
+      padding: .1em;
+      margin-top: 12em;
+      margin-left: 1%;
+      border-style: solid;
+      border-color: black;
+      background-color: white;
+      color: black;
+      word-wrap: break-word;
+    }
+    /* last four articles above on homepage */
     .infinityHomePage{
       display:grid;
       grid-template-columns: 50% 50%;
@@ -179,15 +222,16 @@ input {
       margin-top:1em;
       grid-row-gap: 1em;
     }
-    img{
-      height: 12em;
-      width:100%;
+    #mediumHomepage{
+      height:12em;
     }
+
     .flexContainerOne{
       grid-template-columns: 50% 50%;
       display:grid;
       grid-column-gap: 1em;
-      grid-row-gap: 1.5em;
+      grid-row-gap: 1em;
+      margin-top:5em;
     }
     .flexContainerTwo{
       grid-template-columns: 50% 50%;
@@ -201,17 +245,20 @@ input {
       text-align:center;
     }
     .author{
-      margin-top: 9.7em;
+      margin-top: 8.5em;
       font-size:.9em;
+      padding:.2em;
+      font-size:1em;
     }
     #title{
       font-size:.9em;
       margin-top:.5em;
+      padding:.4em;
     }
     #typetag{
-      margin-top:5.5em;
+      margin-top:4em;
       margin-left: 1.5em;
-      font-size:.1em;
+      font-size:.7em;
       padding:.3em;
     }
     .searchresultscontainer{
@@ -222,10 +269,12 @@ input {
       grid-column-gap: .5em;
       grid-row-gap: .5em;
     }
+    input{
+      margin-top:0em;
+    }
   }
 
-  @media (min-width: 376px) and (max-width: 769px) {
-
+  @media (min-width: 376px) and (max-width: 1100px) {
     .flexContainerOne{
       display:grid;
       grid-template-columns: 50% 50%;
@@ -250,18 +299,20 @@ input {
       text-align:center;
     }
     .author{
-      margin-top: 9.7em;
-      font-size:.9em;
+      margin-top: 8.5em;
+      font-size:1.1em;
+      padding:.1em;
     }
     #title{
-      font-size:.9em;
+      font-size:1.1em;
       margin-top:.5em;
+      padding:.1em;
     }
     #typetag{
-      margin-top:5.5em;
+      margin-top:4em;
       margin-left: 1.5em;
-      font-size:.1em;
-      padding:.3em;
+      font-size:.7em;
+      padding:.4em;
     }
     .searchresultscontainer{
       /* padding-top: 4em; */
@@ -270,6 +321,60 @@ input {
       display:grid;
       grid-column-gap: .5em;
       grid-row-gap: .5em;
+    }
+    input{
+      margin-top:0em;
+    }
+    #itypetag {
+        font-size: .8em;
+        letter-spacing: .1em;
+        position: absolute;
+        font-family: Arial Rounded MT Bold, arial;
+        padding: .3em;
+        margin-left: 2em;
+        margin-top: 8em;
+        /* border-style: solid; */
+        background-color: black;
+        color: white;
+        word-wrap: break-word;
+    }
+    #ititle {
+      font-size: 1.3em;
+      letter-spacing: .1em;
+      position: absolute;
+      font-family: Arial Rounded MT Bold, arial;
+      padding: .3em;
+      margin-top: 4%;
+      margin-left: 1%;
+      /* margin: 1%; */
+      border-style: solid;
+      background-color: white;
+      color: black;
+      word-wrap: break-word;
+    }
+    .iauthor{
+      font-size: 1.8em;
+      letter-spacing: .2em;
+      position: absolute;
+      font-family: Arial Rounded MT Bold, arial;
+      padding: .1em;
+      margin-top: 12em;
+      margin-left: 1%;
+      border-style: solid;
+      border-color: black;
+      background-color: white;
+      color: black;
+      word-wrap: break-word;
+    }
+    /* last four articles above on homepage */
+    .infinityHomePage{
+      display:grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows:50% 50%;
+      padding-right: 1em;
+      grid-column-gap: 1em;
+      margin-top:1em;
+      grid-row-gap: 1em;
     }
   }
 
