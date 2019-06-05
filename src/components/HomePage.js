@@ -38,11 +38,11 @@ class HomePage extends React.Component{
       for(let i=this.props.articles.length - 8; i>= x; i-- ){
         array.push(<div id={this.props.articles[i].id} onClick={this.handleClick}>
           <div id='block'>
-          <div id="title">{this.props.articles[i].title}</div>
-          <div id="typetag">{this.props.articles[i].tag}</div>
-          <div className="author">{this.props.articles[i].author}</div>
+          <div id="smtitle">{this.props.articles[i].title}</div>
+          <div id="smtypetag">{this.props.articles[i].tag}</div>
+          <div className="smauthor">{this.props.articles[i].author}</div>
           </div>
-          <img id="homepage" src={this.props.articles[i].image}/>
+          <img id="smhomepage" src={this.props.articles[i].image}/>
           </div>
         )
       }

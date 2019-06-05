@@ -81,7 +81,8 @@
     margin-bottom: 1.5em;
   }
   .toolbar{
-    width:96%
+    width:100%;
+    margin-left:-1.5em;
   }
   .toolbar_navigation-items{
     display:none;

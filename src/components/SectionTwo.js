@@ -1,8 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import { chosenArticle } from '../actions';
-
-
 import './Section.css'
 class SectionTwo extends React.Component{
 
@@ -48,7 +46,7 @@ class SectionTwo extends React.Component{
     if (article.tag === this.props.clickedSection){
         array.push(
         <div style={{marginBottom:'13em', marginTop:'7em', marginBottom:'17em'}} onClick={this.handleClick} id={article.id}>
-        <img style={{position:'absolute', marginTop:'-2em', height:'20em'}}src={article.image} /><br />
+        <img style={{position:'absolute', marginTop:'-2em', height:'20em', marginLeft:'-1em'}}src={article.image} /><br />
         <div style={{position: 'absolute',
         marginTop:'-2em',
         fontSize: '1.2em',
@@ -56,7 +54,7 @@ class SectionTwo extends React.Component{
         position: 'absolute',
         fontFamily: 'Arial Rounded MT Bold, arial',
         padding: '1%',
-        marginLeft: '1%',
+        marginLeft: '-.1',
         borderStyle: 'solid',
         backgroundColor: 'white',
         color: 'black',
@@ -68,7 +66,7 @@ class SectionTwo extends React.Component{
         fontFamily: 'Arial Rounded MT Bold, arial',
         padding: '1%',
         marginTop: '9em',
-        marginLeft: '1%',
+        marginLeft: '-.1em',
         borderStyle: 'solid',
         borderColor: 'black',
         backgroundColor: 'white',
@@ -77,7 +75,7 @@ class SectionTwo extends React.Component{
 }}>{article.author}</div><br />
         <div style={{fontSize:".8em", letterSpacing: ".1em", position:"absolute", fontFamily: "Arial Rounded MT Bold, arial",
         padding: "1%",
-        marginLeft: "1em",
+        marginLeft: ".5em",
         backgroundColor: "black",
         color: "white",
         wordWrap: "break-word",
