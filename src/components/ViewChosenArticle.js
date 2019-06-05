@@ -42,7 +42,7 @@ class ViewChosenArticle extends React.Component{
   render()  {
 
     return (
-      <div >
+      <div className='vcontainer'>
       <img className='vimage'src={this.props.image}/>
       <div className='vtitle'>{this.props.title }</div>
       <div className='vauthor'>{this.props.author}</div>
