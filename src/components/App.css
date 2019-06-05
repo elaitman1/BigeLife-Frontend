@@ -1,6 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Mr+Dafoe);
-
-
 body {
   margin-top: 7em;
   background: black;
@@ -166,9 +164,6 @@ input {
     text-align: center;
   }
 
-
-
-
   @media (min-width: 1101px){
     /* last four articles on homepage */
     #itypetag {
@@ -204,7 +199,7 @@ input {
       position: absolute;
       font-family: Arial Rounded MT Bold, arial;
       padding: .1em;
-      margin-top: 12em;
+      margin-top: 11em;
       margin-left: 1%;
       border-style: solid;
       border-color: black;
@@ -262,7 +257,6 @@ input {
       padding:.3em;
     }
     .searchresultscontainer{
-      /* padding-top: 4em; */
       margin-top: 9em;
       grid-template-columns:1fr 1fr;
       display:grid;
@@ -315,7 +309,6 @@ input {
       padding:.4em;
     }
     .searchresultscontainer{
-      /* padding-top: 4em; */
       margin-top: 9em;
       grid-template-columns:1fr 1fr;
       display:grid;
@@ -326,25 +319,25 @@ input {
       margin-top:0em;
     }
     #itypetag {
-        font-size: .8em;
+        font-size: .7em;
         letter-spacing: .1em;
         position: absolute;
         font-family: Arial Rounded MT Bold, arial;
         padding: .3em;
-        margin-left: 2em;
-        margin-top: 8em;
+        margin-left: 1.5em;
+        margin-top: 5em;
         /* border-style: solid; */
         background-color: black;
         color: white;
         word-wrap: break-word;
     }
     #ititle {
-      font-size: 1.3em;
+      font-size: 1em;
       letter-spacing: .1em;
       position: absolute;
       font-family: Arial Rounded MT Bold, arial;
       padding: .3em;
-      margin-top: 4%;
+      margin-top: 1em;
       margin-left: 1%;
       /* margin: 1%; */
       border-style: solid;
@@ -353,12 +346,12 @@ input {
       word-wrap: break-word;
     }
     .iauthor{
-      font-size: 1.8em;
+      font-size: 1em;
       letter-spacing: .2em;
       position: absolute;
       font-family: Arial Rounded MT Bold, arial;
       padding: .1em;
-      margin-top: 12em;
+      margin-top: 9em;
       margin-left: 1%;
       border-style: solid;
       border-color: black;
@@ -385,9 +378,7 @@ input {
       height: 2em;
       border: solid;
       border-color:#EB219B;
-      /* background:black; */
       -webkit-filter: drop-shadow(3px 3px 1px #441F62);
-      /* -webkit-transform: skew(-5deg,-5deg); */
       font-weight: normal;
       background-color: black;
       color: #EB219B;
@@ -404,8 +395,7 @@ input {
       margin-top: 5em;
       grid-template-columns:1fr;
       display:grid;
-      /* grid-column-gap: .5em; */
-      /* grid-row-gap: .5em; */
+
     }
     .flexContainerOne{
       width:100%;

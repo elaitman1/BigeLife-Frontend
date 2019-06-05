@@ -1,6 +1,7 @@
 html{
   height: 100%;
   width:100%;
+
 }
 
 body{
@@ -8,6 +9,24 @@ body{
   height: 100%;
   width: 100%;
 }
-.around{
-  margin:4em;
+
+
+@media(max-width:375px){
+  .around{
+     margin-right:0em;
+     margin-left:1em;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 1100px) {
+  .around{
+     margin-right:3em;
+     margin-left:2em;
+  }
+}
+
+@media (min-width: 1101px) {
+  .around{
+     margin-right:2em;
+  }
 }
