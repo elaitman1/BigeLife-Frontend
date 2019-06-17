@@ -23,7 +23,7 @@ class App extends React.Component {
     sideDrawerOpen: false,
     // clickedSection: ''
   }
-  
+
   drawerToggleClickHandler = () => {
     this.setState(prevState => {
       return {sideDrawerOpen: !prevState.sideDrawerOpen}
@@ -35,7 +35,6 @@ class App extends React.Component {
   }
 
   render() {
-    // console.log(this.state.clickedSection)
     let backdrop;
     if(this.state.sideDrawerOpen) {
       backdrop = <Backdrop click={this.backdropClickHandler}/>
