@@ -63,13 +63,3 @@ class App extends React.Component {
   };
 }
 export default App
-// const mapStateToProps = (state, ownProps) => {
-//   debugger
-//   return {
-//     content: state.articles.content
-//   }
-// }
-//
-// export default connect(
-//   mapStateToProps
-// )(App);

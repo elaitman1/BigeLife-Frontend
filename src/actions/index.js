@@ -1,8 +1,6 @@
 import history from '../history'
 
 import {
-  // SIGN_IN,
-  // SIGN_OUT,
   CREATE_ARTICLE,
   CHOSEN_ARTICLE,
   FETCH_ARTICLES,
