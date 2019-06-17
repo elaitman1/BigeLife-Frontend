@@ -21,7 +21,6 @@ import SearchResults from './SearchResults'
 class App extends React.Component {
   state = {
     sideDrawerOpen: false,
-    // clickedSection: ''
   }
 
   drawerToggleClickHandler = () => {
