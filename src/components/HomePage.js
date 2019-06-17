@@ -206,16 +206,9 @@ const mapStateToProps =
        vals: Object.keys(state.articles),
        size:state.browser.is
      };
-   }
+   }           
 
 export default connect(
   mapStateToProps,
   { fetchArticles, chosenArticle }
 )(HomePage);
-
-
-// <div>{this.props.size.medium?
-// this.setHomepageGridArticles()
-// :
-// this.handleHomePageArticlesSmall()
-// }</div>

@@ -23,13 +23,7 @@ class App extends React.Component {
     sideDrawerOpen: false,
     // clickedSection: ''
   }
-
-  // handleClickedSection = async(value) => {
-  //   this.setState({clickedSection: value},() => {
-  //     history.push('/section')
-  //   })
-  // }
-
+  
   drawerToggleClickHandler = () => {
     this.setState(prevState => {
       return {sideDrawerOpen: !prevState.sideDrawerOpen}
