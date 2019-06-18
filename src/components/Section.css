@@ -1,4 +1,114 @@
 .swrapper{
   margin-top: 5em;
   padding-bottom: .1em;
+  margin-bottom:-.5em;
+}
+
+@media (max-width: 375px){
+  .mayAlsoLikeSection{
+    /* position:absolute; */
+    margin-top:0em;
+    letter-spacing: .1em;
+    font-size: 2em;
+    text-align: left;
+    font-family: 'Mr Dafoe', cursive;
+    -webkit-text-fill-color: rgba(253, 90, 250, 1);
+    font-weight: normal;
+    /* z-index: ; */
+    text-align: center;
+    /* color:white; */
+    /* margin-bottom:5em; */
+    margin-bottom:-1em;
+  }
+  #topimg{
+    width:100%;
+    margin-top:0em;
+    height:20em;
+    margin-left:-.5em;
+    margin-bottom:-3em;
+  }
+  #toptitle{
+    position: absolute;
+    margin-top:-13em;
+    font-size:1.2em;
+    letter-spacing:.1em;
+    font-family:Arial Rounded MT Bold, arial;
+    padding:1%;
+    margin-left:0em;
+    /* margin-right:5em; */
+    border-style:solid;
+    background-color:white;
+    word-wrap:break-word;
+  }
+  #topauthor{
+    position: absolute;
+    margin-top:-2em;
+    font-size:1.2em;
+    letter-spacing:.1em;
+    font-family:Arial Rounded MT Bold, arial;
+    padding:1%;
+    margin-left:0em;
+    /* margin-right:5em; */
+    border-style:solid;
+    background-color:white;
+    word-wrap:break-word;
+  }
+  #toptag{
+    font-size: .8em;
+    letter-spacing: .1em;
+    position: absolute;
+    font-family: Arial Rounded MT Bold, arial;
+    padding: 1%;
+    margin-left: .5em;
+    margin-top: -19em;
+    background-color: black;
+    color: white;
+    word-wrap: break-word;
+    position:absolute;
+  }
+  .secauthor{
+    position: absolute;
+    margin-top:12em;
+    font-size:1.2em;
+    letter-spacing:.1em;
+    font-family:Arial Rounded MT Bold, arial;
+    padding:1%;
+    margin-left:.1em;
+    /* margin-right:5em; */
+    border-style:solid;
+    background-color:white;
+    word-wrap:break-word;
+  }
+  .secimg{
+    margin-bottom:-19em;
+    margin-left:-.5em;
+    margin-top:1em;
+  }
+  .sectitle{
+    position: absolute;
+    margin-top:2.5em;
+    font-size:1.2em;
+    letter-spacing:.1em;
+    font-family:Arial Rounded MT Bold, arial;
+    padding:1%;
+    margin-left:0em;
+    /* margin-right:5em; */
+    border-style:solid;
+    background-color:white;
+    word-wrap:break-word;
+  }
+  .sectag{
+    font-size: .8em;
+    letter-spacing: .1em;
+    position: absolute;
+    font-family: Arial Rounded MT Bold, arial;
+    padding: 1%;
+    margin-left: .5em;
+    margin-top: 4em;
+    background-color: black;
+    color: white;
+    word-wrap: break-word;
+    position:absolute;
+  }
+
 }
