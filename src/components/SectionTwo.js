@@ -30,6 +30,7 @@ class SectionTwo extends React.Component{
   }
 
   handleClick = (event) => {
+    debugger
     this.props.clickedSection(event.target.id)
     if(this.props.location.pathname === '/section'){
       this.props.history.push('/sectiontwo')
@@ -45,42 +46,11 @@ class SectionTwo extends React.Component{
   {this.props.articles.filter(article=>{
     if (article.tag === this.props.clickedSection){
         array.push(
-        <div style={{marginBottom:'13em', marginTop:'7em', marginBottom:'17em'}} onClick={this.handleClick} id={article.id}>
-        <img style={{position:'absolute', marginTop:'-2em', height:'20em', marginLeft:'-1em'}}src={article.image} /><br />
-        <div style={{position: 'absolute',
-        marginTop:'-2em',
-        fontSize: '1.2em',
-        letterSpacing: '.1em',
-        position: 'absolute',
-        fontFamily: 'Arial Rounded MT Bold, arial',
-        padding: '1%',
-        marginLeft: '-.1',
-        borderStyle: 'solid',
-        backgroundColor: 'white',
-        color: 'black',
-        wordWrap: 'break-word',
-}}>{article.title}</div><br />
-        <div style={{fontSize: '1.3em',
-        letterSpacing: '.2em',
-        position: 'absolute',
-        fontFamily: 'Arial Rounded MT Bold, arial',
-        padding: '1%',
-        marginTop: '9em',
-        marginLeft: '-.1em',
-        borderStyle: 'solid',
-        borderColor: 'black',
-        backgroundColor: 'white',
-        color: 'black',
-        wordWrap: 'break-word'
-}}>{article.author}</div><br />
-        <div style={{fontSize:".8em", letterSpacing: ".1em", position:"absolute", fontFamily: "Arial Rounded MT Bold, arial",
-        padding: "1%",
-        marginLeft: ".5em",
-        backgroundColor: "black",
-        color: "white",
-        wordWrap: "break-word",
-        marginTop:'-2.5em',
- }}>{article.tag}</div><br />
+        <div onClick={this.handleClick} id={article.id}>
+        <img id="topimg" src={article.image} /><br />
+        <div id='toptitle'> {article.title}</div><br />
+        <div id='topauthor'>{article.author}</div><br />
+        <div id='toptag'>{article.tag}</div><br />
         </div>
       )
     }})}
@@ -88,18 +58,17 @@ class SectionTwo extends React.Component{
   }
 
   render()  {
-
     return (
       <div className='swrapper'>
       {this.tagArticles()}
-      <h1 className='mayAlsoLike'>You May Also Like</h1>
+      <h1 className='mayAlsoLikeSection'>You May Also Like</h1>
       <div>{this.state.youMayAlsoLike.map(article=>{
       return(
-      <div className="spacer" onClick={this.handleClick} id={article.id}>
-        <img className="simg" src={article.image} /><br />
-        <div className="stitle">{article.title}</div><br />
-        <div className="sauthor">{article.author}</div><br />
-        <div className="stag">{article.tag}</div><br />
+        <div onClick={this.handleClick} className="spacer"  id={article.id}>
+        <img className="secimg" src={article.image}/><br />
+        <div className="sectitle">{article.title}</div><br />
+        <div className="secauthor">{article.author}</div><br />
+        <div className="sectag">{article.tag}</div><br />
         </div>
         )
       })}
