@@ -69,7 +69,7 @@
   }
   .secauthor{
     position: absolute;
-    margin-top:12em;
+    margin-top:1em;
     font-size:1.2em;
     letter-spacing:.1em;
     font-family:Arial Rounded MT Bold, arial;
@@ -80,14 +80,14 @@
     word-wrap:break-word;
   }
   .secimg{
-    margin-bottom:-19em;
+    margin-bottom:-6em;
     margin-left:-1em;
-    margin-top:1em;
+    margin-top:3em;
     height:17em;
   }
   .sectitle{
     position: absolute;
-    margin-top:2.5em;
+    margin-top:-8.5em;
     font-size:1.2em;
     letter-spacing:.1em;
     font-family:Arial Rounded MT Bold, arial;
@@ -105,7 +105,7 @@
     font-family: Arial Rounded MT Bold, arial;
     padding: 1%;
     margin-left: .5em;
-    margin-top: 4em;
+    margin-top: -12.5em;
     background-color: black;
     color: white;
     word-wrap: break-word;

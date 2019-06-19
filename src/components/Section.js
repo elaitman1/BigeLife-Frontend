@@ -54,7 +54,7 @@ class Section extends React.Component{
       <h1 className='mayAlsoLikeSection'>You May Also Like</h1>
       <div>{this.state.youMayAlsoLike.map(article=>{
       return(
-      <div onClick={this.handleClick} className="spacer"  id={article.id}>
+        <div  onClick={this.handleClick} id={article.id}>
         <img className="secimg" src={article.image} /><br />
         <div className="sectitle">{article.title}</div><br />
         <div className="secauthor">{article.author}</div><br />
