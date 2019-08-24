@@ -44,11 +44,11 @@ export const createArticle = async(title, author, tag, image, content) => async 
 
 export const chosenArticle = article => {
 
-  return {
-    type: CHOSEN_ARTICLE,
-    payload: article
-  }
-}
+//   return {
+//     type: CHOSEN_ARTICLE,
+//     payload: article
+//   }
+// }
 // export const searchInput = value => {
 //   return {
 //     type: SEARCH_INPUT,
