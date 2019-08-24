@@ -49,12 +49,12 @@ export const chosenArticle = article => {
     payload: article
   }
 }
-export const searchInput = value => {
-  return {
-    type: SEARCH_INPUT,
-    payload: value
-  }
-}
+// export const searchInput = value => {
+//   return {
+//     type: SEARCH_INPUT,
+//     payload: value
+//   }
+// }
 // export const searchResults = (value) => {
 //   return  {
 //     type: SEARCH_RESULTS,
