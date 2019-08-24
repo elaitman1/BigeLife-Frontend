@@ -62,10 +62,10 @@ export const searchResults = (value) => {
   }
 }
 
-export const clickedSection = (value) => {
-
-  return  {
-    type: CLICKED_SECTION,
-    payload: value
-  }
-}
+// export const clickedSection = (value) => {
+//
+//   return  {
+//     type: CLICKED_SECTION,
+//     payload: value
+//   }
+// }
