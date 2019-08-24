@@ -55,12 +55,12 @@ export const searchInput = value => {
     payload: value
   }
 }
-export const searchResults = (value) => {
-  return  {
-    type: SEARCH_RESULTS,
-    payload: value
-  }
-}
+// export const searchResults = (value) => {
+//   return  {
+//     type: SEARCH_RESULTS,
+//     payload: value
+//   }
+// }
 
 // export const clickedSection = (value) => {
 //
