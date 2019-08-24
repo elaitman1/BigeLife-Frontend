@@ -36,36 +36,36 @@ export const createArticle = async(title, author, tag, image, content) => async 
         content: content
       })
     })
-  //   .then(r=>r.json())
-  //   .then(r=>{
-  //     dispatch({ type: CREATE_ARTICLE, payload: r });
-  //   })
-  // }
-//
-// export const chosenArticle = article => {
+    .then(r=>r.json())
+    .then(r=>{
+      dispatch({ type: CREATE_ARTICLE, payload: r });
+    })
+  }
 
-//   return {
-//     type: CHOSEN_ARTICLE,
-//     payload: article
-//   }
-// }
-// export const searchInput = value => {
-//   return {
-//     type: SEARCH_INPUT,
-//     payload: value
-//   }
-// }
-// export const searchResults = (value) => {
-//   return  {
-//     type: SEARCH_RESULTS,
-//     payload: value
-//   }
-// }
+export const chosenArticle = article => {
 
-// export const clickedSection = (value) => {
-//
-//   return  {
-//     type: CLICKED_SECTION,
-//     payload: value
-//   }
-// }
+  return {
+    type: CHOSEN_ARTICLE,
+    payload: article
+  }
+}
+export const searchInput = value => {
+  return {
+    type: SEARCH_INPUT,
+    payload: value
+  }
+}
+export const searchResults = (value) => {
+  return  {
+    type: SEARCH_RESULTS,
+    payload: value
+  }
+}
+
+export const clickedSection = (value) => {
+
+  return  {
+    type: CLICKED_SECTION,
+    payload: value
+  }
+}
