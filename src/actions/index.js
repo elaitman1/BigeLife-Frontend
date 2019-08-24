@@ -41,8 +41,8 @@ export const createArticle = async(title, author, tag, image, content) => async 
       dispatch({ type: CREATE_ARTICLE, payload: r });
     })
   }
-
-export const chosenArticle = article => {
+// 
+// export const chosenArticle = article => {
 
 //   return {
 //     type: CHOSEN_ARTICLE,
