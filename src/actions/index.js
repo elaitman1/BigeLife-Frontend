@@ -32,8 +32,8 @@ export const createArticle = async(title, author, tag, image, content) => async 
         title: title,
         author: author,
         tag: tag,
-        image: image,
-        content: content
+        // image: image,
+        // content: content
     //   })
     // })
     // .then(r=>r.json())
