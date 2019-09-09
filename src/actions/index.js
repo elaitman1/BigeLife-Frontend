@@ -34,8 +34,8 @@ export const createArticle = async(title, author, tag, image, content) => async 
         tag: tag,
         image: image,
         content: content
-      })
-    })
+    //   })
+    // })
     // .then(r=>r.json())
     // .then(r=>{
       // dispatch({ type: CREATE_ARTICLE, payload: r });
